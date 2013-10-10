@@ -1,0 +1,43 @@
+name = seeblue
+description = seeblue
+core = "7.x"
+
+;css
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/newstyles.css
+stylesheets[all][] = css/ie.css
+stylesheets[all][] = css/ie9.css
+stylesheets[all][] = css/responsiveslides.css
+
+;js
+scripts[] = js/css3-mediaqueries.js
+scripts[] = js/custom.js
+scripts[] = js/general.js
+;scripts[] = js/jquery.js
+scripts[] = js/modernizr.js
+scripts[] = js/jqueryui.js
+scripts[] = js/responsiveslides.min.js
+
+
+
+regions[header] = Header
+regions[highlight] = Highlight
+regions[help] = Help
+regions[content_header] = Content Header
+regions[homepage_content] = Homepage Content
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[sidebar_right] = Sidebar Right
+regions[footer_first_column] = Footer First Column
+regions[footer_second_column] = Footer Second Column
+regions[footer_third_column] = Footer Third Column
+regions[footer] = Footer
+regions[footer_social_media] = Footer Social Media
+
+;custom settings - DO NOT EDIT - PROVIDES DEFAULTS FOR THE DRUPAL ADMIN TEMPLATE SETTINGS
+settings[site_description] = Default text
+settings[site_logo] = logo2x-kentucky.png
+settings[background_logo_path] = search-icon.png
+settings[search_placeholder] = Search this site
+settings[interior_logo] = treasurer_logo.png

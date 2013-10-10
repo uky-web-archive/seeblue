@@ -1,0 +1,126 @@
+/*! http://responsiveslides.com v1.53 by @viljamis */
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }
+
+.rslides_nav {
+  position: relative;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  margin-top: -180px;
+  z-index: 999;
+  }
+
+.rslides_nav.next {
+  float: right;
+  }
+  
+.rslides_tabs {
+  text-align: center;
+  display: block;
+  position: relative;
+  background-color: #004DA8;
+}
+  
+.rslides_tabs li {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+}
+
+.rslides_tabs li a {
+  line-height: 16px;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #FFF;
+  display: inline-block;
+  position: relative;
+}
+
+.rslides_tabs li a:hover {
+  text-decoration: none;
+  background: #1B5FAF;
+}
+
+.rslides_tabs li.rslides_here a {
+  background: #FFF;
+  color: #004DA8;
+}
+
+.rslides li .slide-wrap {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.rslides li .slide-wrap .slide-content {
+	float: left;
+	height: 60px;
+	padding: 20px 0;
+	width: 100%;
+	display: block;
+	margin-top: -100px;
+	background: url(../img/bgi/slide-content-bg.png) left top repeat;
+}
+/*
+.rslides li a {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	padding: 10px 0;
+	color: #FFF;
+	width: 90%;
+	margin: 0 5%;
+}
+
+#content .rslides li .slide-wrap .slide-content p {
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 30px;
+	width: 96%;
+	display: block;
+	padding: 0 2%;
+	color: #004EA9;
+	font-size: 24px;
+	text-shadow: 1px 1px 1px #FFF;
+
+}
+*/
+
+@media (max-width: 640px) {
+	#content .rslides li .slide-wrap .slide-content p {
+		font-size: 16px;
+	}
+}

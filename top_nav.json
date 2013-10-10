@@ -1,0 +1,36 @@
+{
+	"global_links": [
+		{
+			"text": "uky.edu",
+			"href": "http://uky.edu",
+			"title": "University of Kentucky main site"
+		},
+		{
+			"text": "uknow",
+			"href": "http://uknow.uky.edu/",
+			"title": "University of Kentucky news"
+		}
+	],
+	"meta_links": [
+		{
+			"text": "link blue",
+			"href": "http://www.uky.edu/UKHome/subpages/linkblue.html",
+			"title": "User Portal"
+		},
+		{
+			"text": "site index",
+			"href": "http://www.uky.edu/Index/",
+			"title": "Directory of all University of Kentucky related pages"
+		},
+		{
+			"text": "directory",
+			"href": "http://www.uky.edu/Directory/",
+			"title": "University of Kentucky campus directory"
+		},
+		{
+			"text": "search",
+			"href": "http://www.uky.edu/Search/",
+			"title": "Search the University of Kentucky website"
+		}
+	]
+}
