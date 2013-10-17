@@ -92,6 +92,13 @@ if ($page['sidebar_first'] || $page['sidebar_second'])
 {
   $is_sidebar = TRUE;
 }
+
+
+//flag for whether we print horizontal or vertical menu
+$is_horizontal = theme_get_setting('use_horizontal_menu');
+
+$menu = menu_navigation_links('main-menu');
+
 ?>
 
 <div class="wrap-top">
@@ -110,9 +117,23 @@ if ($page['sidebar_first'] || $page['sidebar_second'])
     <!-- start content -->
     <div id="main-wrapper">
     
-	<?php if ($page['content_header']): ?>
+	<?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
+
+        <?php if ($is_horizontal == 1): ?>
+
+          <div class="block-menu">
+
+            <div class="content">
+
+              <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+
+            </div>
+
+          </div>
+
+        <?php endif; ?>
 
       <?php print render($page['content_header']); ?>
 
@@ -154,7 +175,21 @@ if ($page['sidebar_first'] || $page['sidebar_second'])
           
           <nav id="main-menu" class="main-nav">
 
-            <?php print render($page['sidebar_first']); ?>
+              <?php if ($is_horizontal == 0): ?>
+
+                  <div class="block-menu">
+
+                      <div class="content">
+
+                          <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+
+                      </div>
+
+                  </div>
+
+              <?php endif; ?>
+
+              <?php print render($page['sidebar_first']); ?>
 
           </nav>
 
