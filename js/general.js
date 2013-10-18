@@ -30,6 +30,7 @@ $(document).ready(function(){
 
 	secondary_menu = '<ul class="menu secondary-menu">' + secondary_menu + '</ul>';
 
+	
 	if (window.innerWidth <= 640)
 	{
 		//$("#block-system-main-menu .content").append(secondary_menu);
@@ -45,14 +46,16 @@ $(document).ready(function(){
 	// toggle the display of the menu when in reponsive mobile layout
 	$('.menulink').click(function(){
 		//$('.block-menu .menu:first-child').slideToggle("fast");
-		$('#block-system-main-menu .menu:first-child').slideToggle("fast");
+//		$('#block-system-main-menu .menu:first-child').slideToggle("fast");
+		$(".mobile-menu .menu:first-child").slideToggle('fast');
 		//$('#block-system-main-menu .secondary-menu').slideToggle("fast");
 		
 	});
 
 	
 	//add class to menu list elements (li) based on whether they are parents or leaves
-	$('.block-menu .menu li').each(function(index) {
+//	$('.block-menu .menu li').each(function(index) {
+	$('.menu li').each(function(index) {
 		if ($(this).children().length < 2) { 						  
 			$(this).addClass('plainlink');	//add 'plainlink' class to leaves
 		}
@@ -62,11 +65,11 @@ $(document).ready(function(){
 	});
 
 	//remove href attribute from all parent links
-	$('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
+//	$('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
+	$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
 	//toggle the display of child links when a parent is clicked
-	$(".block-menu .parentlink > a").click(function() {
-	console.log("Click!");
+	$(".parentlink > a").click(function() {
 		if (window.innerWidth <= 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
@@ -113,7 +116,7 @@ $(document).ready(function(){
 		{
 			$(".block-menu .menu:first-child").css("display", "block");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "block");
-			
+			$(".mobile-menu .menu").css("display", "none");
 			if ($("#block-system-main-menu .content .secondary-menu").length)
 			{
 				$("#block-system-main-menu .content .secondary-menu").remove();
@@ -123,11 +126,6 @@ $(document).ready(function(){
 		{
 			$("#block-system-main-menu .menu:first-child").css("display", "none");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "none");
-			
-			if (!$("#block-system-main-menu .content .secondary-menu").length)
-			{
-				//$("#block-system-main-menu .content").append(secondary_menu);
-			}
 		}
 	});
 
@@ -149,5 +147,4 @@ $(document).ready(function(){
 
 	$("#tabs").tabs();
 	
-	1
 });

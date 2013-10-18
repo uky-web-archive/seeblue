@@ -94,7 +94,7 @@ if ($page['sidebar_first'] || $page['sidebar_second'])
 }
 
 
-//flag for whether we print horizontal or vertical menu
+//
 $is_horizontal = theme_get_setting('use_horizontal_menu');
 
 $menu = menu_navigation_links('main-menu');
@@ -104,6 +104,12 @@ $menu = menu_navigation_links('main-menu');
 <div class="wrap-top">
 
   <?php include_once("global_header.inc"); ?>
+
+</div>
+
+<div class="mobile-menu">
+
+  <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
 
 </div>
 
@@ -120,19 +126,23 @@ $menu = menu_navigation_links('main-menu');
 	<?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
-
-        <?php if ($is_horizontal == 1): ?>
-
-          <div class="block-menu">
-
-            <div class="content">
-
-              <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
-
+      
+		<?php if ($is_horizontal == 1): ?>
+          
+          <div class="region">
+          
+            <div class="block-menu" id="block-system-main-menu">
+          
+              <div class="content">
+        
+      		    <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+              
+              </div>
+          
             </div>
-
+          
           </div>
-
+        
         <?php endif; ?>
 
       <?php print render($page['content_header']); ?>
@@ -170,26 +180,36 @@ $menu = menu_navigation_links('main-menu');
         <?php if ($page['sidebar_first']): ?>
         <!-- start first sidebar -->
         <aside id="sidebar-first" class="sidebar alignleft">
+        
+        <?php
+        $fid = theme_get_setting('interior_logo');
+        $file = file_load($fid);
+        $o = file_create_url($file->uri);
+        ?>
 		  
-          <img src="<?php echo $apath; ?>/img/treasurer_logo.png" alt="UK Office of the Treasurer" style="margin: 2em 0;"/>
+          <img src="<?php echo $o; ?>" alt="<?php echo theme_get_setting('interior_logo_alt'); ?>" class="logo-interior"/>
           
           <nav id="main-menu" class="main-nav">
-
-              <?php if ($is_horizontal == 0): ?>
-
-                  <div class="block-menu">
-
-                      <div class="content">
-
-                          <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
-
-                      </div>
-
+          
+			<?php if ($is_horizontal == 0): ?>
+              
+              <div class="region">
+              
+                <div class="block-menu" id="block-system-main-menu">
+              
+                  <div class="content">
+            
+                    <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+                  
                   </div>
+              
+                </div>
+                
+              </div>
+            
+            <?php endif; ?>          
 
-              <?php endif; ?>
-
-              <?php print render($page['sidebar_first']); ?>
+            <?php print render($page['sidebar_first']); ?>
 
           </nav>
 
@@ -297,3 +317,12 @@ $menu = menu_navigation_links('main-menu');
   </div>
 
 </div>
+<?php
+/*
+        $fid = theme_get_setting('interior_logo');
+        $file = file_load($fid);
+        $o = file_create_url($file->uri);
+		
+		echo $o;
+*/
+?>

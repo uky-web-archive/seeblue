@@ -135,12 +135,12 @@ body {	font: 14px/23px  HelveticaNeue, Helvetica, Arial, sans-serif; color:#4444
 /* =Headings
 --------------------------------------------------------------------------------------------------*/
 h1 {font-family: 'HelveticaNeueThin'; color: #FFF; font-size: 36px;}
-h2 { text-transform:capitalize; color:#00479al; font-size:26px; line-height:31px; font-weight:normal; padding-bottom:5px; color:#00479A; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.06em;}
-h3 { text-transform:capitalize; background:url(../img/bgi/newshead-bg.png) no-repeat left top; font-size:26px; line-height:37px; color:#fff; font-weight:normal; padding:0 0 0 12px; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.04em;}
+h2 {color:#00479al; font-size:26px; line-height:31px; font-weight:normal; padding-bottom:5px; color:#00479A; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.06em;}
+h3 {background:url(../img/bgi/newshead-bg.png) no-repeat left top; font-size:26px; line-height:37px; color:#fff; font-weight:normal; padding:0 0 0 12px; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.04em;}
 h3 {font-size:20px; line-height:28px; font-weight:normal; color:#00479a; border-bottom:1px solid #dededf; padding-bottom:5px; margin-bottom:16px; background: none;}
-h4 {text-transform:capitalize; font-size:16px; color:#8aa3b8; line-height:20px; display:block; padding-bottom:3px; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.04em;}
+h4 {font-size:16px; color:#8aa3b8; line-height:20px; display:block; padding-bottom:3px; font-family: 'HelveticaNeueThin', helvetica, arial, san-serif; letter-spacing: 0.04em;}
 h5 {font-size:20px; line-height:28px; font-weight:normal; color:#00479a; border-bottom:1px solid #dededf; padding-bottom:5px; margin-bottom:16px;}
-h6 {text-transform:capitalize; font-size:18px; line-height:24px; font-weight:normal; color:#00479a; padding-bottom: 9px; display:block;}
+h6 {font-size:18px; line-height:24px; font-weight:normal; color:#00479a; padding-bottom: 9px; display:block;}
 
 .title-link a {
 	text-transform: capitalize;
@@ -164,7 +164,6 @@ h2.page-header,
 .field-name-body h4,
 .field-name-body h5,
 .field-name-body h6 {
-	text-transform: capitalize;
 	background: none;
 	color: #00479A;
 	font-family: 'HelveticaNeueThin';
@@ -213,6 +212,11 @@ h2.page-header,
 	width: 100%;
 	margin: 0;
 	border-radius: 0px;
+}
+
+.logo-interior {
+	margin: 2em 0;
+	width: 100%;
 }
 /* End Images
 --------------------------------------------------------------------------------------------------*/
@@ -278,6 +282,7 @@ p{padding:0 0 10px;}
 /* =Main Nav
 --------------------------------------------------------------------------------------------------*/
 
+.mobile-menu ul {display: none;}
 .block-menu .menu:first-child {padding:0 0 25px 0; float: left; width: 100%; display: block;}
 .block-menu .menu:first-child li {float:left; width:100%; position:relative; list-style: none; margin: 0; padding: 0;}
 .block-menu .menu li a { text-transform:capitalize; color:#00479a; line-height:20px; display:block; text-decoration:none; padding-left:11px; padding-top:5px; padding-bottom:5px; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
@@ -305,7 +310,7 @@ p{padding:0 0 10px;}
 #content-header .block-menu > div > ul.menu > li {width: 20%; float: left;}
 #content-header .block-menu > div > ul.menu > li > a {color: #FFF; height: 1em; overflow: hidden; text-align: center; white-space: nowrap; border: 1px solid #8AA3B8; border-width: 0 1px 1px 0; padding: 4px 0px 14px; }
 #content-header .block-menu > div > ul.menu > li > a:hover {background: #004EA9; text-shadow: 0 0 3px #C0D4EB;}
-#content-header .block-menu > div > ul.menu > li > ul {position: absolute; width: 120%; z-index: 9;}
+#content-header .block-menu > div > ul.menu > li > ul {position: absolute; width: 120%; z-index: 999;}
 #content-header .block-menu > div > ul.menu > li.active ul {display: block;}
 
 #content-header .block-menu > div > ul.menu > li ul {padding: 0;}
@@ -366,7 +371,7 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 .content-boxinner{padding-top: 20px; border-top:1px solid #dededf;}
 .row-first .content-box .content-boxinner{border-top:none; padding-top:0;}
 .figure-img{padding-right:3.9%; width:96.1%;}
-.figure-img img{width:100%;}
+.figure-img img{width:100%; height: auto;}
 .figure-desc{padding:8px 11px 21px;}
 .figure-desc p{font-size:14px; line-height:23px; color:#444444; padding:0 0 8px;}
 #content .figure-desc p{padding:0 0 8px;}
@@ -728,7 +733,7 @@ ul.quicktabs-tabs li a:hover {
 
 #block-search-form {display: block; width: 100%; padding: 23px 0; border: 1px solid #dededf; border-width: 1px 0 1px 0;}
 #block-search-form #search-block-form {width: 100%;}
-#block-search-form input.form-text {display: block; float: left; padding: 13px 8px; width: 75%; margin-right: 5%; border: 1px solid #c8c8c8; background: url(../img/bgi/search-bg.jpg) top left repeat-x;}
+#block-search-form input.form-text {display: block; float: left; padding: 4% 2% 4% 3%; width: 75%; margin-right: 5%; border: 1px solid #c8c8c8; background: url(../img/bgi/search-bg.jpg) top left repeat-x;}
 #block-search-form input.form-submit {float: left; width: 13%; padding: 0; margin: 2px 0 0; max-width: 39px; height: auto;}
 
 /* End Treasurer2 Page Content
@@ -817,7 +822,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 /* Landscape phone to portrait tablet */
 @media (max-width: 640px) {
 	
-	#block-system-main-menu {}
+	#main-wrapper .region #block-system-main-menu {position: fixed; top: 82px; left: 0px; width: 100%;}
 	#footer-wrapper #footer .region ul.menu {display: none !important;}
 	.wrap-inner, .section{width:92.3%;}
 	.wrap-inner {position: relative;}
@@ -830,139 +835,40 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.menulink span{display:block; position:relative; z-index:1;}
 	.menulink img{position: absolute; left: 0; top: 0; width:100%;}
 	.menulink:hover{text-decoration:none;}
-	#content-header {position: absolute; top: 0px; z-index: 9;}
+	#content-header {position: absolute; top: 0px; z-index: 999;}
 	.block-menu .menu:first-child,
-	#content-header .block-menu .menu:first-child {display: none; /*position:absolute; left:0; top:82px;*/ width:100%; z-index:11; background:#004da8; position:relative;}
-	/*#content-header .block-menu .menu:first-child {position: absolute;}*/
+	#content-header .block-menu .menu:first-child {display: none; width:100%; z-index:99999; background:#004da8; position:relative;}
 	.front #main-menu {top: 0px;}
 	.front .block-menu .menu{margin:0; padding:0; width: 100%;}
 	.block-menu .menu li ul {display:none; padding:0;}
 	#content-header .block-menu .menu li {width: 100%;}
-	
+
 	#main-wrapper #sidebar-first, #main-wrapper #sidebar-second { width: 100%;}
 	
 	
-	#main-wrapper .region .block-menu {display: block;}
+	.mobile-menu {display: block; font-family: 'HelveticaNeue-Roman';}
 	
-	#main-wrapper .region .block-menu ul.menu {display: none; /*position: absolute; top: 83px; left: 0px;*/ border: none;}
-	#main-wrapper .region .block-menu ul.menu:first-child {margin-top: 83px;}
-	#main-wrapper .region .block-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
+	.mobile-menu ul.menu {display: none; border: none;}
+	.mobile-menu ul.menu:first-child {margin-top: 0; padding: 0;}
+	.mobile-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
 	
-	#main-wrapper .region .block-menu ul.menu li {width: 100%; display: block; background: url(../img/bgi/menu_top_level.png) top left repeat-x;}
+	.mobile-menu ul.menu li {width: 100%; display: block; background: url(../img/bgi/menu_top_level.png) top left repeat-x; margin: 0; padding: 0;}
 	#main-wrapper .region #block-menu-menu-secondary-navigation ul.menu li {background: url(../img/bgi/menu_secondary.png) top left repeat-x; border-bottom: 1px solid #88a5c9;}
 	#main-wrapper .region #block-menu-menu-secondary-navigation {border: 1px solid #004da8; border-width: 1px 0 1px 0;}
-	#main-wrapper .region .block-menu ul.menu li:hover {text-shadow: none; background: url(../img/bgi/menu_top_level.png) top left repeat-x;}
-	#main-wrapper .region .block-menu ul.menu li li {background: url(../img/bgi/menu_second_level.png) top left repeat-x; color: #FFF;}
-	#main-wrapper .region .block-menu ul.menu li li:hover {background: url(../img/bgi/menu_second_level.png) top left repeat-x;}
-	#main-wrapper .region .block-menu ul.menu li li li {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
-	#main-wrapper .region .block-menu ul.menu li li li:hover {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
+	.mobile-menu ul.menu li:hover {text-shadow: none; background: url(../img/bgi/menu_top_level.png) top left repeat-x;}
+	.mobile-menu ul.menu li li {background: url(../img/bgi/menu_second_level.png) top left repeat-x; color: #FFF;}
+	.mobile-menu ul.menu li li:hover {background: url(../img/bgi/menu_second_level.png) top left repeat-x;}
+	.mobile-menu ul.menu li li li {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
+	.mobile-menu ul.menu li li li:hover {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
 	
-	#main-wrapper .region .block-menu ul.menu li a {width: 96%; text-align: left; font-size: 30px; padding: 20px 2%; text-shadow: none; border: none; height: 30px; overflow: hidden; background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; color: #FFF;}
-	#main-wrapper .region .block-menu ul.menu li a:hover {background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; text-shadow: none;}
-	#main-wrapper .region .block-menu ul.menu li.parentlink > a {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}
-	#main-wrapper .region .block-menu ul.menu li.parentlink > a:hover {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}
+	.mobile-menu ul.menu li a {width: 96%; text-align: left; font-size: 30px; padding: 20px 2%; text-shadow: none; border: none; height: 30px; overflow: hidden; background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; color: #FFF; display: block;}
+	.mobile-menu ul.menu li a:hover {background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; text-shadow: none; text-decoration: none;}
+	.mobile-menu ul.menu li.parentlink > a {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}
+	.mobile-menu ul.menu li.parentlink > a:hover {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}
 	
-
-
-	/*
-		Styles for ALL normal links up to five (5) levels deep
-	*
-	#block-system-main-menu .menu > li > a,
-	#block-system-main-menu .menu > li li > a,
-	#block-system-main-menu .menu > li li li > a,
-	#block-system-main-menu .menu > li li li li > a,
-	#block-system-main-menu .menu > li li li li li > a,
-	#content-header #block-system-main-menu .menu > li > a,
-	#content-header #block-system-main-menu .menu > li li > a,
-	#content-header #block-system-main-menu .menu > li li li > a,
-	#content-header #block-system-main-menu .menu > li li li li > a,
-	#content-header #block-system-main-menu .menu > li li li li li > a {color: #FFF; font-size: 30px; line-height: 40px; padding: 20px 40px 20px 13px; border-bottom:1px solid #3369a7; background: #004da8 url(../img/bgi/sprites.png) no-repeat right -345px !important;}
-	#block-system-main-menu .menu > li > a:hover,
-	#block-system-main-menu .menu > li li > a:hover,
-	#block-system-main-menu .menu > li li li > a:hover,
-	#block-system-main-menu .menu > li li li li > a:hover,
-	#block-system-main-menu .menu > li li li li li > a:hover,
-	#block-system-main-menu .menu > li > a:hover,
-	#content-header #block-system-main-menu .menu > li li > a:hover,
-	#content-header #block-system-main-menu .menu > li li li > a:hover,
-	#content-header #block-system-main-menu .menu > li li li li > a:hover,
-	#content-header #block-system-main-menu .menu > li li li li li > a:hover  {background:#004DA8 url(../img/bgi/sprites.png) no-repeat right -345px; text-shadow: none;}
-	/*
-		Styles for ALL parent links up to four (4) levels deep
-	*
-	#block-system-main-menu .menu > li.parentlink > a,
-	#block-system-main-menu .menu > li.parentlink li.parentlink > a,
-	#block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink > a,
-	#block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink li.parentlink > a,
-	#content-header #block-system-main-menu .menu > li.parentlink > a,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink > a,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink > a,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink li.parentlink > a {background:#004DA8 url(../img/bgi/sprites.png) no-repeat right -516px;}
-	#block-system-main-menu .menu > li.parentlink > a:hover,
-	#block-system-main-menu .menu > li.parentlink li.parentlink > a:hover,
-	#block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink > a:hover,
-	#block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink li.parentlink > a:hover,
-	#content-header #block-system-main-menu .menu > li.parentlink > a:hover,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink > a:hover,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink > a:hover,
-	#content-header #block-system-main-menu .menu > li.parentlink li.parentlink li.parentlink li.parentlink > a:hover {background:#004DA8 url(../img/bgi/sprites.png) no-repeat right -516px;}
-
-	/*
-		Styles for links ONLY 2 levels deep
-	*
-	#block-system-main-menu .menu li.parentlink li > a,
-	#block-system-main-menu .menu li.parentlink li.parentlink > a,
-	.front #main-menu-links li.parentlink li > a,
-	.front #main-menu-links li.parentlink li.parentlink > a {background-color: #187CD6;}
-	#block-system-main-menu .menu li.parentlink li > a:hover,
-	#block-system-main-menu .menu li.parentlink li.parentlink > a:hover,
-	.front #main-menu-links li.parentlink li > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink > a:hover {background-color: #187CD6;}
-	/*
-		Styles for links ONLY 3 levels deep
-	*
-	#block-system-main-menu .menu li.parentlink li.parentlink li > a,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink > a,
-	.front #main-menu-links li.parentlink li.parentlink li > a,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink > a {background-color: #187CD6; padding-left: 30px;}
-	#block-system-main-menu .menu li.parentlink li.parentlink li > a:hover,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink > a:hover {background-color: #187CD6;}
-	/*
-		Styles for links ONLY 4 levels deep
-	*
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li > a,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink > a,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li > a,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink > a {background-color: #187CD6; padding-left: 60px;}
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li > a:hover,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink > a:hover {background-color: #187CD6;}
-	/*
-		Styles for links ONLY 5 levels deep
-	*
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink li > a,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink li.parentlink > a,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink li > a,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink li.parentlink > a {background-color: #187CD6; padding-left: 90px;}
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink li > a:hover,
-	#block-system-main-menu .menu li.parentlink li.parentlink li.parentlink li.parentlink li.parentlink > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink li > a:hover,
-	.front #main-menu-links li.parentlink li.parentlink li.parentlink li.parentlink li.parentlink > a:hover {background-color: #187CD6;}
-
 	
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li {display: block; width: 100% !important; backgroun: #004ca6; float: left; position: relative; border: 1px solid #336aa7; border-width: 1px 0 0; z-index: 11;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li a {font-size: 30px; color: #FFF; padding: 20px 2% 20px 2%; width: 96% ; text-align: left; line-height: 30px;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li > a:hover {text-shadow: none;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li ul {position: relative; padding: 0; width: 100%;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li a {}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li a.open {background-color: #0e72d4 !important;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li li a.open-child {background: url(../img/bgi/iphone-menubg.png) top left repeat-x !important;}
-	#main-wrapper #content-header #block-system-main-menu > div > .menu > li li a {border-top: 1px solid #2b75bf;}
-*/
-
+	
+	
 	.topRightLink {padding-top: 22px; padding-left:0%; width:70%; text-align:right;}
 	.topRightLink li{float:none; display:inline;}
 	.topRightLink li a{font-size:20px; line-height:30px; display:inline-block;}
@@ -1001,6 +907,9 @@ fieldset { border: none; margin: 0; padding: 0; }
  
 /* Landscape phones and down */
 @media (max-width: 480px) { 
+
+	#main-wrapper .region #block-system-main-menu {position: fixed; top: 0px; left: 0px; width: 100%;}
+	#main-wrapper .region .block-menu ul.menu:first-child {margin-top: 0px;}
 	html {	-webkit-text-size-adjust: none; }
 	.wrap-top{background:url(../img/bgi/iphoneheader-bg.png) repeat-x left top; min-height:61px;}
 	.menulink{line-height: 44px; font-size: 14px; padding:0 0 0 5px; margin-top:8px; height:44px; width: 70px; background:url(../img/bgi/sprites.png) no-repeat -296px -250px;}
@@ -1072,8 +981,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.block-menu .menu > li li li > a:hover,
 	.block-menu .menu > li li li li > a:hover,
 	.block-menu .menu > li li li li li > a:hover {background:#004DA8 url(../img/bgi/sprites.png) no-repeat right -360px;}
-/*	.block-menu .menu li a, .block-menu .menu li li > a{font-size:16px;}
-	.block-menu .menu li li li li > a{font-size:16px;}
+
 */
 
 	#navigation-primary ul li a {font-size: 12px; line-height: 14px; padding: 5px 0;}
@@ -1090,54 +998,6 @@ fieldset { border: none; margin: 0; padding: 0; }
 	cursor:pointer;
 	text-indent:-999em; 
 }
-/*.social-icon a.rss {
-	background:url("../img/mediaButtonsSprite.png") no-repeat 0 0 transparent;
-}
-.social-icon a.rss:hover {
-	background-position: 0 -29px;
-}
-.social-icon a.linkedin {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -29px 0 transparent;
-}
-.social-icon a.linkedin:hover {
-	background-position: -29px -29px;
-}
-.social-icon a.twitter-t {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -58px 0 transparent;
-}
-.social-icon a.twitter-t:hover {
-	background-position: -58px -29px;
-}
-.social-icon a.instagram {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -145px 0 transparent;
-}
-.social-icon a.instagram:hover {
-	background-position: -145px -29px;
-}
-.social-icon a.youtube {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -116px 0 transparent;
-}
-.social-icon a.youtube:hover {
-	background-position: -116px -29px;
-}
-.social-icon a.flickr {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -87px 0 transparent;
-}
-.social-icon a.flickr:hover {
-	background-position: -87px -29px;
-}
-.social-icon a.facebook {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -174px 0 transparent;
-}
-.social-icon a.facebook:hover {
-	background-position: -174px -29px;
-}
-.social-icon a.twitter {
-	background:url("../img/mediaButtonsSprite.png") no-repeat -203px 0 transparent;
-}
-.social-icon a.twitter:hover {
-	background-position: -203px -29px;
-}*/
 .social-icon a.myspace {
 	background:url("../img/sbsprite.png") no-repeat 0 0 transparent;
 }

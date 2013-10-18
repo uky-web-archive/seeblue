@@ -2,6 +2,13 @@
 
 $description = theme_get_setting("site_description");
 
+
+
+
+$fid = theme_get_setting('front_logo');
+$file = file_load($fid);
+$o = file_create_url($file->uri);
+
 ?>
 <style type="text/css">
 	#header-inner .wrap-inner {
@@ -14,7 +21,7 @@ $description = theme_get_setting("site_description");
 		<div class="wrap-inner section cf"> 
 			<!-- start logo -->
 			<h1 class="alignleft" id="logo">
-			<a title="KENTUCKY" href="/"><img title="KENTUCKY" alt="site logo" src="<?php print file_create_url(theme_get_setting("logo_path"));; //echo $logo; ?>"></a>
+			<a title="KENTUCKY" href="/"><img title="KENTUCKY" alt="<?php echo theme_get_setting('front_logo_alt'); ?>" src="<?php print $o; ?>"></a>
 			</h1>
 			<!-- end logo -->
 			<div class="head-right alignright">
