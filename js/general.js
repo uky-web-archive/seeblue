@@ -1,6 +1,24 @@
 // Utilizing the Modernizr object created to implement placeholder functionality
 $(document).ready(function(){
 
+    /*
+     Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
+     */
+    if (typeof $(".rslides").responsiveSlides == 'function')
+    {
+        //use this variable to toggle the pager for the slideshow - if we have a pager add the margin-bottom to the pager instead of the slideshow itself
+        var hasPager = true;
+
+        $(".rslides").responsiveSlides({
+            pager: hasPager,
+            timeout: 10000
+        });
+
+        setTimeout(position_pager, 1000)
+
+        //(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
+    }
+
 	if(typeof(Modernizr) != 'undefined' && !Modernizr.input.placeholder){
 		$('input[type="text"]').each(function(){
 			var phAttr = $(this).attr('placeholder');
@@ -17,8 +35,7 @@ $(document).ready(function(){
 				  $(this).blur(function(){
 					if($(this).val() == ''){
 					  $(this).val($(this).attr('placeholder'));
-					  $(this).addClass('default_title_text');
-					}
+					  $(this).addClass('default_title_text');}
 				  });
 				}
 			}    
@@ -79,7 +96,6 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$("#sidebar-first .block-menu .parentlink > a").click(function() {
-	console.log("Click!");
 		if (window.innerWidth > 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
@@ -108,6 +124,8 @@ $(document).ready(function(){
 		$(this).parents("li.parentlink").children("a").removeClass("highlight");
 	});
 
+
+
 	/*
 		Check the window size when it's re-sized to see if we need to hide/show the menu
 	*/
@@ -127,24 +145,50 @@ $(document).ready(function(){
 			$("#block-system-main-menu .menu:first-child").css("display", "none");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "none");
 		}
+
+        position_pager();
+
+
 	});
 
-	/*
-		Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
-	*/
-	if (typeof $(".rslides").responsiveSlides == 'function')
-	{
-		//use this variable to toggle the pager for the slideshow - if we have a pager add the margin-bottom to the pager instead of the slideshow itself
-		var hasPager = true;
-		
-		$(".rslides").responsiveSlides({
-			pager: hasPager,
-			timeout: 20000
-		});
-		
-		(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
-	}
+
+    function position_pager()
+    {
+        //figure out where to position the slideshow pager based on the height of the images
+        if ($('.rslides').length > 0)
+        {
+            //get the height of the images in the slider
+            var img_height = $(".rslides li:first-child img").css("height");
+            //convert "px" string to integer
+            img_height = img_height.substr(0, img_height.length-2) * 1;
+
+            //get the height of the pager
+            var pager_height = $(".rslides_tabs").css("height");
+            //convert "px" string to integer
+            pager_height = pager_height.substr(0, pager_height.length-2) * 1;
+
+            //calculate the final position of the pager (includes 10 px of padding)
+            var pager_top = (img_height - pager_height - 10) + 'px';
+
+            $(".rslides_tabs").css("top", pager_top);
+            $(".rslides_tabs").css("display", "block");
+
+        }
+    }
+
 
 	$("#tabs").tabs();
+
+
+
+
+
+    /*
+    When the main nav menu is in the sidebar, expand the nested menus as appropriate to show the current page's link
+     */
+    if (window.innerWidth > 640 ) {
+        $("#sidebar-first #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
+    }
+
 	
 });

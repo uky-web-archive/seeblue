@@ -253,7 +253,7 @@ html, body, #page{height:100%;}
 #content {width:68%; padding:0;}
 #sidebar-first, #sidebar-second {width:32%; padding-top: 20px;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
-.front #content .block {width: 97%; padding-left: 3%;}
+.front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
 #content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; min-height: 1200px;}
 p{padding:0 0 10px;}
@@ -301,7 +301,7 @@ p{padding:0 0 10px;}
 .block-menu .menu li li li.active > a{color:#777777;}
 .block-menu .menu li li li li.active > a{color:#4076a3; background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
 #sidebar-first .block-menu .menu li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -178px;}
-#sidebar-first .block-menu .menu li li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
+#sidebar-first .block-menu .menu li li a:hover, #sidebar-first .block-menu .menu li li a.active:first-child {background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
 
 #sidebar-first .block-menu .menu li.parentlink > a:hover{background-position: right -102px;}
 #sidebar-first .block-menu .menu li.parentlink li.parentlink > a:hover{background-position: right -105px;}
