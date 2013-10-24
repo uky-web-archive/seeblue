@@ -234,6 +234,7 @@ a:hover {text-decoration:underline;}
 /* =Branding
 --------------------------------------------------------------------------------------------------------*/
 p {padding:0 0 23px 0; margin:0;}
+p a {color: #444; text-decoration: underline;}
 html, body, #page{height:100%;}
 #page-wrapper{width:100%;}
 .wrap-inner, .section{width:970px; margin:0 auto;}
