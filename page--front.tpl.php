@@ -274,6 +274,21 @@ $menu = menu_navigation_links('main-menu');
 
             </a>
 
+            <?php
+
+            $text_url = '';
+
+            if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+              $text_url .= 'https://';
+            }
+            else {
+              $text_url .= 'http://';
+            }
+            $text_url .= $_SERVER['SERVER_NAME'];
+            $text_url .= $_SERVER['REQUEST_URI'];
+
+            ?>
+
             <div class="copytext alignright">
 
               &copy; University of kentucky | Lexington, kentucky 40506 | (859) 257-9000 | An equal opportunity university | <a href="#" title="Mission statement">Mission statement</a> | <a href="#" title="Text only">Text only</a>
