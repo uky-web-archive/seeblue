@@ -7,6 +7,7 @@
 
 .rslides {
   margin-bottom: 20px;
+  border: 1px solid #dededf;
 }
 
 .rslides, .rslides_tabs {
@@ -45,10 +46,14 @@
   width: 100%;
 }
 
+.rslides li {
+  padding: 0.5em;
+}
+
 .rslides li .slide-overlay {
   line-height: 1.5em;
   overflow: hidden;
-  padding: 0.5em 5%;
+
   display: block;
   color: #999;
 }
