@@ -215,8 +215,8 @@ h2.page-header,
 }
 
 .logo-interior {
-	margin: 2em 0;
-	width: 100%;
+	padding: 2em 10%;
+	width: 80%;
 }
 /* End Images
 --------------------------------------------------------------------------------------------------*/
@@ -249,6 +249,9 @@ html, body, #page{height:100%;}
 #logo a, #logo-inner a {display:block; text-decoration:none;	}
 #logo a img, #logo-inner a img {width:100%;}
 #header-inner {background: #3671b6;}
+.head-right {position: relative;}
+.head-right .content {position: absolute; display: table; height: 116px;}
+.head-right .content p {display: table-cell; vertical-align: middle;}
 #main-wrapper {padding:0px 0 31px; min-height:500px;}
 #content {width:68%; padding:0;}
 #sidebar-first, #sidebar-second {width:32%; padding-top: 20px;}
@@ -259,7 +262,7 @@ html, body, #page{height:100%;}
 p{padding:0 0 10px;}
 .wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top; min-height:45px;}
 .head-right{width:64.6%; padding-right:1.4%;}
-.head-right{padding-right:4px;}
+.head-right{padding-right:4px; height: 116px;}
 .head-right p{color:#eeeeee; line-height:23px; font-size:16px;}
 .not-front .head-right {width: 65%; padding: 0;}
 .menulink{display:none;}
@@ -286,7 +289,7 @@ p{padding:0 0 10px;}
 .mobile-menu ul {display: none;}
 .block-menu .menu:first-child {padding:0 0 25px 0; float: left; width: 100%; display: block;}
 .block-menu .menu:first-child li {float:left; width:100%; position:relative; list-style: none; margin: 0; padding: 0;}
-.block-menu .menu li a { text-transform:capitalize; color:#00479a; line-height:20px; display:block; text-decoration:none; padding-left:11px; padding-top:5px; padding-bottom:5px; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
+.block-menu .menu li a { color:#00479a; line-height:20px; display:block; text-decoration:none; padding-left:11px; padding-top:5px; padding-bottom:5px; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
 #footer .block-menu .menu li a {color: #89b3e4;}
 .front #main-menu-links li a {text-transform: capitalize; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
 .block-menu .menu li ul {display:none; padding:10px 0; float: left; width: 100%;}
@@ -829,6 +832,8 @@ fieldset { border: none; margin: 0; padding: 0; }
 
 }
 @media (min-width: 641px) and (max-width: 768px) {
+    .head-right {height: 94px;}
+    .head-right .content {height: 94px;}
 	.head-right p{ font-size:10px; line-height:14px;}
 	.front #header-inner .wrap-inner {padding-top: 14px; min-height: 94px;}
 	.sidebar-searchform label{width:70%;}

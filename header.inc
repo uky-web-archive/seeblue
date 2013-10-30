@@ -13,7 +13,7 @@ $o = file_create_url($file->uri);
 <style type="text/css">
 	#header-inner .wrap-inner {
 		background: #3671b6 url(<?php print file_create_url(theme_get_setting('background_logo_path')); ?>) left center no-repeat;
-		background-size: contain;
+		background-size: cover;
 	}
 </style>
 <header id="header">
