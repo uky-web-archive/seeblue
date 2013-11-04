@@ -759,7 +759,7 @@ ul.quicktabs-tabs li a:hover {
 .footer-top ul li a{ text-transform:capitalize; padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
 .footer-top ul li:hover a, .footer-top ul li:focus a, .footer-top ul li:hover a, .footer-top ul li.active a{color:#fff; border-bottom:1px solid #1a5aa6; background:url(../img/bgi/sprites.png) no-repeat right 8px #1b5faf;}
 .footer-bottom {margin:0 12px; border-top:1px solid #125bb0; border-bottom:1px solid #125bb0; padding:14px 0px 4px 18px;}
-.region-footer p { text-transform:capitalize; font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
+.region-footer p {font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
 .social-icon{padding:4px 1px 0 0;}
 .social-icon li{float:left; padding:0 6px 6px; line-height: 41px;}
 
@@ -767,7 +767,7 @@ ul.quicktabs-tabs li a:hover {
 .copyright p {padding: 0;}
 .foot-logo{background: url(../img/bgi/foot-logo1.png) no-repeat 0 0; display: block; height: 24px; margin: 4px 3% 0 0; text-indent: -999em; width: 13%;}
 .foot-logo img{width:100%;}
-.copytext{text-transform:capitalize; width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
+.copytext{ width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
 .copytext a{text-transform:capitalize; color:#89b3e4; font-size:12px;}
 /* End Footer
 --------------------------------------------------------------------------------------------------*/
