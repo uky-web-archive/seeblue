@@ -224,7 +224,7 @@ h1.page-header,
 
 /* =Links
 --------------------------------------------------------------------------------------------------*/
-a {text-decoration:none; color:#000;	cursor:pointer !important; outline: 0;}
+a {text-decoration:none; color:#00479a;	cursor:pointer !important; outline: 0;}
 a:hover {text-decoration:underline;}
 
 /* End Links
@@ -233,8 +233,7 @@ a:hover {text-decoration:underline;}
 
 /* =Branding
 --------------------------------------------------------------------------------------------------------*/
-p {padding:0 0 23px 0; margin:0;}
-p a {color: #444; text-decoration: underline;}
+p {padding:0 0 0px 0; margin:0;}
 html, body, #page{height:100%;}
 #page-wrapper{width:100%;}
 .wrap-inner, .section{width:970px; margin:0 auto;}
@@ -259,7 +258,7 @@ html, body, #page{height:100%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
 #content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; min-height: 1200px;}
-p{padding:0 0 10px;}
+/*p{padding:0 0 10px;}*/
 .wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top; min-height:45px;}
 .head-right{width:64.6%; padding-right:1.4%;}
 .head-right{padding-right:4px; height: 116px;}
@@ -295,7 +294,7 @@ p{padding:0 0 10px;}
 .block-menu .menu li ul {display:none; padding:10px 0; float: left; width: 100%;}
 
 .block-menu h2 {display: none;}
-.block-menu .menu li li > a{color:#8aa3b8; font-size:14px; padding:2px 0 2px 11px;}
+.block-menu .menu li li > a{color:#8aa3b8; font-size:14px; padding:2px 18px 2px 11px;}
 .block-menu .menu li li li > a{padding-left:20px;}
 .block-menu .menu li li li li > a{padding:2px 10px 2px 40px; line-height: 20px;}
 .block-menu .menu li li li li li > a {padding:2px 10px 2px 60px; line-height: 20px;}
@@ -424,11 +423,11 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 }
 .field-name-body ul li {
 	list-style: disc;
-	color: #000;
+	color: rgb(68, 68, 68);
 }
 .field-name-body ol li {
 	list-style: decimal outside none;
-	color: #000;
+	color: rgb(68, 68, 68);
 }
 .field-name-body table {
 	border: 1px solid #89B3E4;
@@ -651,7 +650,7 @@ ul.quicktabs-tabs li a:hover {
 
 /* =Inner Page Content
 --------------------------------------------------------------------------------------------------*/
-#content p{padding:0 0 23px; line-height: 23px; margin: 10px 0 0 0;}
+#content p{padding:0 0 0px; line-height: 23px; margin: 10px 0 0 0;}
 .headslide img{width:100%;}
 .discretionary-block{padding-bottom:24px;}
 .discretionary-block p .more{font-size:14px; line-height:23px;}
@@ -764,10 +763,10 @@ ul.quicktabs-tabs li a:hover {
 .region-footer-second-column{width:32%; padding-left:2.3%; float: left;}
 .region-footer-third-column{width:31%; padding-left:2.2%; float: left;}
 .footer-top ul li{float:left; width:100%; list-style: none;}
-.footer-top ul li a{ text-transform:capitalize; padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
+.footer-top ul li a{padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
 .footer-top ul li:hover a, .footer-top ul li:focus a, .footer-top ul li:hover a, .footer-top ul li.active a{color:#fff; border-bottom:1px solid #1a5aa6; background:url(../img/bgi/sprites.png) no-repeat right 8px #1b5faf;}
 .footer-bottom {margin:0 12px; border-top:1px solid #125bb0; border-bottom:1px solid #125bb0; padding:14px 0px 4px 18px;}
-.region-footer p { text-transform:capitalize; font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
+.region-footer p {font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
 .social-icon{padding:4px 1px 0 0;}
 .social-icon li{float:left; padding:0 6px 6px; line-height: 41px;}
 
@@ -775,8 +774,9 @@ ul.quicktabs-tabs li a:hover {
 .copyright p {padding: 0;}
 .foot-logo{background: url(../img/bgi/foot-logo1.png) no-repeat 0 0; display: block; height: 24px; margin: 4px 3% 0 0; text-indent: -999em; width: 13%;}
 .foot-logo img{width:100%;}
-.copytext{text-transform:capitalize; width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
-.copytext a{text-transform:capitalize; color:#FFF; font-size:12px;}
+.copytext{ width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
+.copytext a{text-transform:capitalize; color:#89b3e4; font-size:12px;}
+
 /* End Footer
 --------------------------------------------------------------------------------------------------*/
 

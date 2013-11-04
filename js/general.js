@@ -90,7 +90,7 @@ $(document).ready(function(){
 
 	//remove href attribute from all parent links
 //	$('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
-	$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
+	//$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
 	//toggle the display of child links when a parent is clicked
 	$(".parentlink > a").click(function() {
