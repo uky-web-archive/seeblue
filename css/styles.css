@@ -224,7 +224,7 @@ h2.page-header,
 
 /* =Links
 --------------------------------------------------------------------------------------------------*/
-a {text-decoration:none; color:#000;	cursor:pointer !important; outline: 0;}
+a {text-decoration:none; color:#00479a;	cursor:pointer !important; outline: 0;}
 a:hover {text-decoration:underline;}
 
 /* End Links
@@ -233,7 +233,7 @@ a:hover {text-decoration:underline;}
 
 /* =Branding
 --------------------------------------------------------------------------------------------------------*/
-p {padding:0 0 23px 0; margin:0;}
+p {padding:0 0 0px 0; margin:0;}
 p a {color: #444; text-decoration: underline;}
 html, body, #page{height:100%;}
 #page-wrapper{width:100%;}
@@ -259,7 +259,7 @@ html, body, #page{height:100%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
 #content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; min-height: 1200px;}
-p{padding:0 0 10px;}
+/*p{padding:0 0 10px;}*/
 .wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top; min-height:45px;}
 .head-right{width:64.6%; padding-right:1.4%;}
 .head-right{padding-right:4px; height: 116px;}
@@ -643,7 +643,7 @@ ul.quicktabs-tabs li a:hover {
 
 /* =Inner Page Content
 --------------------------------------------------------------------------------------------------*/
-#content p{padding:0 0 23px; line-height: 23px; margin: 10px 0 0 0;}
+#content p{padding:0 0 0px; line-height: 23px; margin: 10px 0 0 0;}
 .headslide img{width:100%;}
 .discretionary-block{padding-bottom:24px;}
 .discretionary-block p .more{font-size:14px; line-height:23px;}

@@ -53,9 +53,12 @@
 .rslides li .slide-overlay {
   line-height: 1.5em;
   overflow: hidden;
+/*  display: block;
+  color: #999;*/
+}
 
-  display: block;
-  color: #999;
+.rslides li .slide-overlay a{
+  text-decoration: underline;
 }
 
 /*
