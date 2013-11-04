@@ -93,11 +93,12 @@ $(document).ready(function(){
 	//$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
 	//toggle the display of child links when a parent is clicked
-	$(".parentlink > a").click(function() {
+	$(".parentlink > a").click(function(e) {
 		if (window.innerWidth <= 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
+		e.preventDefault();
 	});
 
 
