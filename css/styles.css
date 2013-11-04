@@ -756,7 +756,7 @@ ul.quicktabs-tabs li a:hover {
 .region-footer-second-column{width:32%; padding-left:2.3%; float: left;}
 .region-footer-third-column{width:31%; padding-left:2.2%; float: left;}
 .footer-top ul li{float:left; width:100%; list-style: none;}
-.footer-top ul li a{ text-transform:capitalize; padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
+.footer-top ul li a{padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
 .footer-top ul li:hover a, .footer-top ul li:focus a, .footer-top ul li:hover a, .footer-top ul li.active a{color:#fff; border-bottom:1px solid #1a5aa6; background:url(../img/bgi/sprites.png) no-repeat right 8px #1b5faf;}
 .footer-bottom {margin:0 12px; border-top:1px solid #125bb0; border-bottom:1px solid #125bb0; padding:14px 0px 4px 18px;}
 .region-footer p {font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
