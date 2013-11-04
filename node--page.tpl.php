@@ -83,7 +83,7 @@
 
 <?php print $user_picture; ?>
 <?php print render($title_prefix); ?>
-<h2 class="page-header"><?php print $title; ?></h2>
+<h1 class="page-header"><?php print $title; ?></h1>
 <?php print render($content['field_header_image']); ?>
 <?php print render($title_suffix); ?>
 <?php if ($display_submitted): ?>

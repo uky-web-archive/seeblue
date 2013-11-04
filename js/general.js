@@ -11,12 +11,19 @@ $(document).ready(function(){
 
         $(".rslides").responsiveSlides({
             pager: hasPager,
+            nav: true,
+            prevText: "",
+            nextText: "",
             timeout: 10000
         });
 
-        setTimeout(position_pager, 1000)
+        setTimeout(position_pager, 1000);
 
         //(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
+    }
+
+    if (typeof $(".slideshow").cycle == 'function') {
+
     }
 
 	if(typeof(Modernizr) != 'undefined' && !Modernizr.input.placeholder){

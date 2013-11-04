@@ -155,11 +155,11 @@ h6 {font-size:18px; line-height:24px; font-weight:normal; color:#00479a; padding
 	text-decoration: none;
 }
 
-.content h2.page-header {
+.content h1.page-header {
 	margin-top: 10px;
 }
+h1.page-header,
 .field-name-body h2,
-h2.page-header,
 .field-name-body h3,
 .field-name-body h4,
 .field-name-body h5,
@@ -214,7 +214,7 @@ h2.page-header,
 	border-radius: 0px;
 }
 
-.logo-interior {
+#sidebar-first .logo-interior {
 	padding: 2em 10%;
 	width: 80%;
 }
@@ -524,9 +524,9 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 	border-bottom: 1px solid #DEDEDF;
 	padding-bottom: 10px;
 }
-#sidebar-second img {
-	margin: 5px 10px 0 0;
-}
+
+#sidebar-first img, #sidebar-second img, #sidebar-right img {margin: 5px 0; width: 100%; height: auto;}
+
 #sidebar-second .block-block {
 	margin: 20px 0;
 }
@@ -634,6 +634,14 @@ ul.quicktabs-tabs li a:hover {
 .more-link a:hover {
 	text-decoration: none;
 }
+
+.view-contentlist .item-list ul li {float: left; width: 48%; margin: 0;}
+.view-contentlist .item-list ul li.views-row-odd {clear: left; margin-right: 4%;}
+.view-contentlist .item-list ul li a {text-decoration: underline; font-style: italic;}
+.view-contentlist .item-list ul li h2 a {text-decoration: none; font-style: normal;}
+
+
+
 /* =End Main Content
 --------------------------------------------------------------------------------------------------*/
 
@@ -768,7 +776,7 @@ ul.quicktabs-tabs li a:hover {
 .foot-logo{background: url(../img/bgi/foot-logo1.png) no-repeat 0 0; display: block; height: 24px; margin: 4px 3% 0 0; text-indent: -999em; width: 13%;}
 .foot-logo img{width:100%;}
 .copytext{text-transform:capitalize; width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
-.copytext a{text-transform:capitalize; color:#89b3e4; font-size:12px;}
+.copytext a{text-transform:capitalize; color:#FFF; font-size:12px;}
 /* End Footer
 --------------------------------------------------------------------------------------------------*/
 
@@ -840,7 +848,9 @@ fieldset { border: none; margin: 0; padding: 0; }
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 640px) {
-	
+
+    .view-contentlist .item-list ul li {width: 100%; margin: 0 !important;}
+
 	#main-wrapper .region #block-system-main-menu {position: fixed; top: 82px; left: 0px; width: 100%;}
 	#footer-wrapper #footer .region ul.menu {display: none !important;}
 	.wrap-inner, .section{width:92.3%;}
@@ -863,6 +873,8 @@ fieldset { border: none; margin: 0; padding: 0; }
 	#content-header .block-menu .menu li {width: 100%;}
 
 	#main-wrapper #sidebar-first, #main-wrapper #sidebar-second { width: 100%;}
+
+
 	
 	
 	.mobile-menu {display: block; font-family: 'HelveticaNeue-Roman';}
@@ -880,7 +892,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.mobile-menu ul.menu li li li {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
 	.mobile-menu ul.menu li li li:hover {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
 	
-	.mobile-menu ul.menu li a {width: 96%; text-align: left; font-size: 30px; padding: 20px 2%; text-shadow: none; border: none; height: 30px; overflow: hidden; background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; color: #FFF; display: block;}
+	.mobile-menu ul.menu li a {width: 96%; text-align: left; font-size: 22px; padding: 10px 2%; text-shadow: none; border: none; height: 30px; overflow: hidden; background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; color: #FFF; display: block;}
 	.mobile-menu ul.menu li a:hover {background: transparent url(../img/bgi/sprites.png) right -348px no-repeat; text-shadow: none; text-decoration: none;}
 	.mobile-menu ul.menu li.parentlink > a {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}
 	.mobile-menu ul.menu li.parentlink > a:hover {background: transparent url(../img/bgi/sprites.png) right -526px no-repeat;}

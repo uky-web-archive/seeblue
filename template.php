@@ -15,7 +15,7 @@ if ( is_null( theme_get_setting( 'site_description' ) ) || is_null ( theme_get_s
     'site_description' 		=> theme_get_setting('site_description'),
     'background_logo_path'	=> theme_get_setting('background_logo_path')
   );
-
+/*
   // Get default theme settings.
   $settings = theme_get_settings($theme_key);
 
@@ -37,6 +37,7 @@ if ( is_null( theme_get_setting( 'site_description' ) ) || is_null ( theme_get_s
 
   // Force refresh of Drupal internals.
   theme_get_setting('', TRUE);
+*/
 }
 
 

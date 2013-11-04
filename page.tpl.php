@@ -187,7 +187,7 @@ $menu = menu_navigation_links('main-menu');
         $o = file_create_url($file->uri);
         ?>
 		  
-          <img src="<?php echo $o; ?>" alt="<?php echo theme_get_setting('interior_logo_alt'); ?>" class="logo-interior"/>
+          <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
           
           <nav id="main-menu" class="main-nav">
           

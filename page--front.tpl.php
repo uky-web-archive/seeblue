@@ -118,6 +118,12 @@ $menu = menu_navigation_links('main-menu');
     <!-- start content -->
     <div id="main-wrapper">
 
+      <?php if ($page['showcase']): ?>
+
+        <?php print render($page['showcase']); ?>
+
+      <?php endif; ?>
+
 	<?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
