@@ -2,18 +2,29 @@
 
 $description = theme_get_setting("site_description");
 
-
-
-
 $fid = theme_get_setting('front_logo');
 $file = file_load($fid);
 $o = file_create_url($file->uri);
+// If the filename contains the word tile, tile the background instead of centering it. 
+$bgfile = theme_get_setting('background_logo_path');
 
+if(strpos($bgfile,'-tile') !== false) {
+	$whichheader = "";
+	$background = "#3671b6 url(" . file_create_url($bgfile) . ") center center;";
+	$bgsize = "auto;"; 
+} else {
+	$whichheader = "-inner .wrap-inner ";
+	$background = "#3671b6 url(" . file_create_url($bgfile) . ") left center no-repeat;";
+	$bgsize = "cover;"; 
+}
 ?>
 <style type="text/css">
-	#header-inner .wrap-inner {
-		background: #3671b6 url(<?php print file_create_url(theme_get_setting('background_logo_path')); ?>) left center no-repeat;
-		background-size: cover;
+	#header { 
+		background: #3671b6; 
+	}
+	#header<?php print $whichheader; ?> {
+		background: <?php print $background; ?>
+		background-size: <?php print $bgsize; ?>
 	}
 </style>
 <header id="header">

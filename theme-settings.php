@@ -77,6 +77,9 @@ function seeblue_form_system_theme_settings_alter(&$form, $form_state)
       '#options'      => array(
         $file_path . '/img/header-bg.png' => t('UK Logo'),
         $file_path . '/img/header-bg-2.png' => t('Main Building'),
+		$file_path . '/img/hbg/seeblue.png' => t('SeeBlue Logo'),
+		$file_path . '/img/hbg/seeblue-tile.png' => t('SeeBlue Tile'),
+		$file_path . '/img/hbg/uk-tile' => t('UK Tile'),
       ),
       '#default_value'  => theme_get_setting('background_logo_select')
   );

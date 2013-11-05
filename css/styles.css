@@ -247,7 +247,7 @@ html, body, #page{height:100%;}
 #logo a, #logo-inner a {background:none;}
 #logo a, #logo-inner a {display:block; text-decoration:none;	}
 #logo a img, #logo-inner a img {width:100%;}
-#header-inner {background: #3671b6;}
+
 .head-right {position: relative;}
 .head-right .content {position: absolute; display: table; height: 116px;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
@@ -772,9 +772,12 @@ ul.quicktabs-tabs li a:hover {
 
 .copyright{padding:28px 12px 28px 29px;}
 .copyright p {padding: 0;}
-.foot-logo{background: url(../img/bgi/foot-logo1.png) no-repeat 0 0; display: block; height: 24px; margin: 4px 3% 0 0; text-indent: -999em; width: 13%;}
-.foot-logo img{width:100%;}
-.copytext{ width:79.4%; background:url(../img/bgi/footlogo-line.png) no-repeat left top; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 0 10px 3.8%; }
+
+.foot-logo {display: block; width: 18%; height: 48px;}
+.foot-logo.seeblue {width: 14%; border-left: 1px solid #345eaf;}
+.foot-logo img {margin: auto; display: block; padding-top: 12px;}
+
+.copytext{ width:47%; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 10% 10px; text-align: center; }
 .copytext a{text-transform:capitalize; color:#89b3e4; font-size:12px;}
 
 /* End Footer
@@ -934,6 +937,9 @@ fieldset { border: none; margin: 0; padding: 0; }
 
 	#navigation-primary ul li a{font-size:14px;}
 	.accordion-hori{min-height:200px;}
+
+	.foot-logo {width: 49%;}
+	.foot-logo img {width: 100%; height: auto;}
 }
  
 /* Landscape phones and down */
