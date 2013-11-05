@@ -275,9 +275,11 @@ $menu = menu_navigation_links('main-menu');
           <div class="copyright cf">
 
             <a class="foot-logo alignleft" href="#" title="KENTUCKY">
+              <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
+            </a>
 
-              <img alt="KENTUCKY" src="<?php echo $apath; ?>/img/foot-logo.png" title="KENTUCKY" />
-
+            <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
+              <img src="<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
             </a>
 
             <?php

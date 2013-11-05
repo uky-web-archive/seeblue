@@ -1,5 +1,7 @@
 <?php
-  $drupalpath = path_to_theme(); 
+
+
+  $drupalpath = path_to_theme();
   
 	try { 
 		$data = json_decode(file_get_contents($drupalpath . "/top_nav.json"));
@@ -34,6 +36,8 @@
 <div class="wrap-inner cf"> <a class="menulink alignleft" href="javascript:void(0);" title="Menu"><span>Menu</span><img src="<?php echo $apath; ?>/img/menulink-bg.png" alt="Menu" title="Menu" /></a>
   <ul class="topRightLink alignleft">
     <?php
+
+    //echo $drupalpath . "/top_nav.json";
       foreach ($data->global_links as $l)
       {
         $link = '<li>';

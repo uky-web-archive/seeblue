@@ -23,7 +23,9 @@ $(document).ready(function(){
     }
 
     if (typeof $(".slideshow").cycle == 'function') {
-
+        $(".slideshow").cycle({
+            pager: '.slideshow-pager'
+        });
     }
 
 	if(typeof(Modernizr) != 'undefined' && !Modernizr.input.placeholder){

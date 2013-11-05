@@ -268,6 +268,7 @@ html, body, #page{height:100%;}
 .topRightLink li{float:left; padding:8px 0 8px 22px;}
 .topRightLink li:first-child{padding:8px 0 8px 0;}
 .topRightLink li a{display:block; line-height:28px; font-size:11px; color:#f7f7f7; text-transform:uppercase; font-family: helvetica, arial, san-serif;}
+.topRightLink li a img {vertical-align: sub; width: 80%;}
 .top-link{padding-right:12px;}
 .top-link li{float:left; padding:8px 0 8px 26px;}
 .top-link li:first-child{padding:8px 0 8px 0;}
