@@ -267,7 +267,7 @@ html, body, #page{height:100%;}
 .menulink{display:none;}
 .topRightLink li{float:left; padding:8px 0 8px 22px;}
 .topRightLink li:first-child{padding:8px 0 8px 0;}
-.topRightLink li a{display:block; line-height:28px; font-size:11px; color:#f7f7f7; text-transform:uppercase; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
+.topRightLink li a{display:block; line-height:28px; font-size:11px; color:#f7f7f7; text-transform:uppercase; font-family: helvetica, arial, san-serif;}
 .top-link{padding-right:12px;}
 .top-link li{float:left; padding:8px 0 8px 26px;}
 .top-link li:first-child{padding:8px 0 8px 0;}
@@ -775,7 +775,7 @@ ul.quicktabs-tabs li a:hover {
 
 .foot-logo {display: block; width: 18%; height: 48px;}
 .foot-logo.seeblue {width: 14%; border-left: 1px solid #345eaf;}
-.foot-logo img {margin: auto; display: block; padding-top: 12px;}
+.foot-logo img {margin: auto; display: block; padding-top: 12px; max-width: 100%;}
 
 .copytext{ width:47%; color:#89b3e4; line-height:24px; font-size:12px; padding:4px 10% 10px; text-align: center; }
 .copytext a{text-transform:capitalize; color:#89b3e4; font-size:12px;}
@@ -938,7 +938,8 @@ fieldset { border: none; margin: 0; padding: 0; }
 	#navigation-primary ul li a{font-size:14px;}
 	.accordion-hori{min-height:200px;}
 
-	.foot-logo {width: 49%;}
+	.foot-logo {width: 49%; margin: 15px auto;}
+	 .foot-logo.seeblue {width: 24%; border: 0;}
 	.foot-logo img {width: 100%; height: auto;}
 }
  
