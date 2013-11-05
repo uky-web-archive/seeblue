@@ -299,7 +299,7 @@ $menu = menu_navigation_links('main-menu');
 
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | 859-257-9000 | An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> | <a href="http://assistive.usablenet.com/tt/<?php echo $text_url; ?>" title="Text only">Text Only</a>
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 | An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> | <a href="http://assistive.usablenet.com/tt/<?php echo $text_url; ?>" title="Text only">Text Only</a>
 
             </div>
 
