@@ -118,11 +118,11 @@ $menu = menu_navigation_links('main-menu');
     <!-- start content -->
     <div id="main-wrapper">
 
-	<?php if ($page['content_header'] || $is_horizontal == 1): ?>
+	  <?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
       
-		<?php if ($is_horizontal == 1): ?>
+		    <?php if ($is_horizontal == 1): ?>
         
           <div class="region">
           
@@ -140,79 +140,83 @@ $menu = menu_navigation_links('main-menu');
         
         <?php endif; ?>
       
-      <?php print render($page['content_header']); ?>
+        <?php print render($page['content_header']); ?>
 
       </div>
 
     <?php endif; ?>
 
 
-      <?php if ($page['showcase']): ?>
+    <?php if ($page['showcase']): ?>
 
-        <?php print render($page['showcase']); ?>
+      <?php print render($page['showcase']); ?>
 
-      <?php endif; ?>
+    <?php endif; ?>
 
-      <div id="main" class="wrap-inner cf">
+    <div id="main" class="wrap-inner cf">
 
-        <section id="content" class="widecolumn alignright">
+      <section id="content" class="widecolumn alignright">
 
-          <div class="content-list cf">
+        <div class="content-list cf">
 
-	    <div class="block site-messages"><?php print $messages;?></div>
+          <div class="block site-messages">
 
-            <?php print render($tabs); ?>
-            <?php print render($page['homepage_content']); ?>
+            <?php print $messages;?>
 
           </div>
 
-        </section>
+          <?php print render($tabs); ?>
+          <?php print render($page['homepage_content']); ?>
 
-        <?php if ($page['sidebar_first']): ?>
+        </div>
+
+      </section>
+
+      <?php if ($page['sidebar_first']): ?>
         <!-- start first sidebar -->
         <aside id="sidebar-first" class="sidebar alignleft">
 
           <nav id="main-menu" class="main-nav">
           
-			<?php if ($is_horizontal == 0): ?>
-            
-            <div class="region">
-              
-              <div class="block-menu" id="block-system-main-menu">
-              
-                <div class="content">
-            
-                  <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
-                  
+            <?php if ($is_horizontal == 0): ?>
+
+              <div class="region">
+
+                <div class="block-menu" id="block-system-main-menu">
+
+                  <div class="content">
+
+                    <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+
+                  </div>
+
                 </div>
-              
+
               </div>
-              
-            </div>
-            
+
             <?php endif; ?>
-          
+
             <?php print render($page['sidebar_first']); ?>
             
           </nav>
 
         </aside>
         <!-- end first sidebar -->
-        <?php endif; ?>
+      <?php endif; ?>
 
-        <?php if ($page['sidebar_second']): ?>
-        <!-- start second sidebar -->
-        <aside id="sidebar-second" class="sidebar alignleft">
+      <?php if ($page['sidebar_second']): ?>
+      <!-- start second sidebar -->
+      <aside id="sidebar-second" class="sidebar alignleft">
 
-          <div class="newsblock cf">
+        <div class="newsblock cf">
 
-            <?php print render($page['sidebar_second']); ?>
+          <?php print render($page['sidebar_second']); ?>
 
-          </div>
+        </div>
 
-        </aside>
-        <!-- end second sidebar -->
-        <?php endif; ?>
+      </aside>
+      <!-- end second sidebar -->
+      <?php endif; ?>
 
       </div>
 
@@ -278,6 +282,7 @@ $menu = menu_navigation_links('main-menu');
             <?php print render($page['copyright']); ?>
 
           <?php endif; ?>
+
 
         </div>
 

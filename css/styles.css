@@ -884,7 +884,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	
 	.mobile-menu {display: block; font-family: 'HelveticaNeue-Roman';}
 	
-	.mobile-menu ul.menu {display: none; border: none;}
+	.mobile-menu ul.menu {/*display: none;*/ border: none;}
 	.mobile-menu ul.menu:first-child {margin-top: 0; padding: 0;}
 	.mobile-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
 	

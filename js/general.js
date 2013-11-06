@@ -1,6 +1,11 @@
 // Utilizing the Modernizr object created to implement placeholder functionality
 $(document).ready(function(){
 
+    $(".mobile-menu ul.menu").css("display", "none");
+
+    //remove href attribute from all parent links
+    $('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
+
     /*
      Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
      */
@@ -22,9 +27,11 @@ $(document).ready(function(){
         //(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
     }
 
-    if (typeof $(".slideshow").cycle == 'function') {
-        $(".slideshow").cycle({
-            pager: '.slideshow-pager'
+    //  if the markup and scripts for the slider are in place, initialize it
+    if (typeof $(".flexslider").flexslider == 'function') {
+        $('.flexslider').flexslider({
+            prevText: "",
+            nextText: ""
         });
     }
 
@@ -52,9 +59,9 @@ $(document).ready(function(){
 	}
 
 
-	var secondary_menu = $("#block-menu-menu-secondary-navigation .menu").html();
+	//var secondary_menu = $("#block-menu-menu-secondary-navigation .menu").html();
 
-	secondary_menu = '<ul class="menu secondary-menu">' + secondary_menu + '</ul>';
+	//secondary_menu = '<ul class="menu secondary-menu">' + secondary_menu + '</ul>';
 
 	
 	if (window.innerWidth <= 640)
@@ -90,8 +97,7 @@ $(document).ready(function(){
 		}
 	});
 
-	//remove href attribute from all parent links
-//	$('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
+
 	//$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
 	//toggle the display of child links when a parent is clicked

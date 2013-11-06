@@ -28,7 +28,8 @@
 .flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {width: 100%; display: block;}
 .flex-pauseplay span {text-transform: capitalize;}
-.flexslider .slides li .slide-content {float: left; width: 45%; padding: 20px 5% 20px 10%; margin-top: -170px; position: absolute; height: 130px;
+
+.flexslider .slides li .slide-content {float: left; width: 45%; padding: 20px 5% 20px 10%; margin-top: -170px; position: absolute; height: 130px; text-shadow: 1px 1px 1px #000;
 
     background: -moz-linear-gradient(left,  rgba(20,86,163,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(20,86,163,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
@@ -41,6 +42,12 @@
 }
 .flexslider .slides li .slide-content h2 { color: #FFF; font-family: 'HelveticaNeue-Roman'; font-weight: bold; font-size: 36px; padding-bottom: 20px; }
 .flexslider .slides li .slide-content .slide-caption {color: #fff; font-style: italic; height: 6em; overflow: hidden; font-family: 'HelveticaNeue-Roman'; line-height: 1.2em;}
+
+/* styles for slider outside of showcase region */
+#main .flexslider .slides li .slide-content {padding: 10px 5% 10px 10%; height: 60px; margin-top: -80px;}
+#main .flexslider .slides li .slide-content h2 {font-size: 20px; line-height: 20px; padding-bottom: 5px;}
+#main .flexslider .slides li .slide-content .slide-caption {font-size: 12px; height: 3em; line-height: 1em;}
+#main .flex-direction-nav a {width: 27px; height: 47px;}
 
 /* Clearfix for the .slides element */
 .slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
