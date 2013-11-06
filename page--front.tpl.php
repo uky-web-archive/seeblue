@@ -118,12 +118,6 @@ $menu = menu_navigation_links('main-menu');
     <!-- start content -->
     <div id="main-wrapper">
 
-      <?php if ($page['showcase']): ?>
-
-        <?php print render($page['showcase']); ?>
-
-      <?php endif; ?>
-
 	<?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
@@ -151,6 +145,13 @@ $menu = menu_navigation_links('main-menu');
       </div>
 
     <?php endif; ?>
+
+
+      <?php if ($page['showcase']): ?>
+
+        <?php print render($page['showcase']); ?>
+
+      <?php endif; ?>
 
       <div id="main" class="wrap-inner cf">
 
@@ -272,38 +273,11 @@ $menu = menu_navigation_links('main-menu');
 
           </div>
 
-          <div class="copyright cf">
+          <?php if ($page['copyright']): ?>
 
-            <a class="foot-logo alignleft" href="#" title="KENTUCKY">
-              <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
-            </a>
+            <?php print render($page['copyright']); ?>
 
-            <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
-              <img src="<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
-            </a>
-
-            <?php
-
-            $text_url = '';
-
-            if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
-              $text_url .= 'https://';
-            }
-            else {
-              $text_url .= 'http://';
-            }
-            $text_url .= $_SERVER['SERVER_NAME'];
-            $text_url .= $_SERVER['REQUEST_URI'];
-
-            ?>
-
-            <div class="copytext alignright">
-
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | 859-257-9000 | An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> | <a href="http://assistive.usablenet.com/tt/<?php echo $text_url; ?>" title="Text only">Text Only</a>
-
-            </div>
-
-          </div>
+          <?php endif; ?>
 
         </div>
 
