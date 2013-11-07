@@ -1,12 +1,18 @@
 // Utilizing the Modernizr object created to implement placeholder functionality
 $(document).ready(function(){
 
+    /*
+    // Add novalidate tag if HTML5.
+    if (!$.browser.msie || $.browser.version > 7) {
+        this.attr('novalidate', 'novalidate');
+    }
+    */
+
     $(".mobile-menu ul.menu").css("display", "none");
 
-    //remove href attribute from all parent links
-    $('.block-menu .menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
     /*
+        !!!DEPRECATED!!!
      Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
      */
     if (typeof $(".rslides").responsiveSlides == 'function')
@@ -64,7 +70,7 @@ $(document).ready(function(){
 	//secondary_menu = '<ul class="menu secondary-menu">' + secondary_menu + '</ul>';
 
 	
-	if (window.innerWidth <= 640)
+	if ($(window).innerWidth() <= 640)
 	{
 		//$("#block-system-main-menu .content").append(secondary_menu);
 	}
@@ -85,7 +91,6 @@ $(document).ready(function(){
 		
 	});
 
-	
 	//add class to menu list elements (li) based on whether they are parents or leaves
 //	$('.block-menu .menu li').each(function(index) {
 	$('.menu li').each(function(index) {
@@ -94,6 +99,7 @@ $(document).ready(function(){
 		}
 		else {
 			$(this).addClass('parentlink');	//add 'parentlink' class to parents
+            $(this).children('a').attr('href', 'javascript:void(0);');
 		}
 	});
 
@@ -102,24 +108,24 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$(".parentlink > a").click(function(e) {
-		if (window.innerWidth <= 640)
+		if ($(window).innerWidth() <= 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
-		e.preventDefault();
+		//e.preventDefault();
 	});
 
 
 	//toggle the display of child links when a parent is clicked
 	$("#sidebar-first .block-menu .parentlink > a").click(function() {
-		if (window.innerWidth > 640)
+		if ($(window).innerWidth() > 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
 	});
 	
 	$("#content-header .block-menu > .content > .menu > li").mouseover(function() {
-		if (window.innerWidth > 640)
+		if ($(window).innerWidth() > 640)
 		{
 			$(this).addClass("active");
 		}
@@ -146,7 +152,7 @@ $(document).ready(function(){
 		Check the window size when it's re-sized to see if we need to hide/show the menu
 	*/
 	$(window).resize(function() {
-		if (window.innerWidth > 640)	//minimum window width for desktop layout
+		if ($(window).innerWidth() > 640)	//minimum window width for desktop layout
 		{
 			$(".block-menu .menu:first-child").css("display", "block");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "block");
@@ -202,7 +208,7 @@ $(document).ready(function(){
     /*
     When the main nav menu is in the sidebar, expand the nested menus as appropriate to show the current page's link
      */
-    if (window.innerWidth > 640 ) {
+    if ($(window).innerWidth() > 640 ) {
         $("#sidebar-first #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
     }
 

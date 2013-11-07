@@ -290,6 +290,7 @@ html, body, #page{height:100%;}
 .block-menu .menu:first-child {padding:0 0 25px 0; float: left; width: 100%; display: block;}
 .block-menu .menu:first-child li {float:left; width:100%; position:relative; list-style: none; margin: 0; padding: 0;}
 .block-menu .menu li a { color:#00479a; line-height:20px; display:block; text-decoration:none; padding-left:11px; padding-top:5px; padding-bottom:5px; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
+.block-menu .menu li.parentlink {overflow: hidden;}
 #footer .block-menu .menu li a {color: #89b3e4;}
 .front #main-menu-links li a {text-transform: capitalize; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
 .block-menu .menu li ul {display:none; padding:10px 0; float: left; width: 100%;}
@@ -421,6 +422,9 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 	line-height: 23px;
 	margin: 20px 0;
 	padding: 3px 0 3px 25px;
+}
+.field-name-body ul ul, .field-name-body ol ol {
+    margin: 5px 0;
 }
 .field-name-body ul li {
 	list-style: disc;
