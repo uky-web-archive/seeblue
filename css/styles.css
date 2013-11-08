@@ -290,7 +290,8 @@ html, body, #page{height:100%;}
 .block-menu .menu:first-child {padding:0 0 25px 0; float: left; width: 100%; display: block;}
 .block-menu .menu:first-child li {float:left; width:100%; position:relative; list-style: none; margin: 0; padding: 0;}
 .block-menu .menu li a { color:#00479a; line-height:20px; display:block; text-decoration:none; padding-left:11px; padding-top:5px; padding-bottom:5px; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
-.block-menu .menu li.parentlink {overflow: hidden;}
+.block-menu .menu li.parentlink {overflow: visible;}
+#footer .block-menu .menu {padding-bottom: 0px;}
 #footer .block-menu .menu li a {color: #89b3e4;}
 .front #main-menu-links li a {text-transform: capitalize; font-family: 'HelveticaNeue-Roman', helvetica, arial, san-serif;}
 .block-menu .menu li ul {display:none; padding:10px 0; float: left; width: 100%;}
@@ -316,7 +317,7 @@ html, body, #page{height:100%;}
 #content-header .block-menu > div > ul.menu > li > a {color: #FFF; height: 1em; overflow: hidden; text-align: center; white-space: nowrap; border: 1px solid #8AA3B8; border-width: 0 1px 1px 0; padding: 4px 0px 14px; }
 #content-header .block-menu > div > ul.menu > li > a:hover {background: #004EA9; text-shadow: 0 0 3px #C0D4EB;}
 #content-header .block-menu > div > ul.menu > li > ul {position: absolute; width: 120%; z-index: 999;}
-#content-header .block-menu > div > ul.menu > li.active ul {display: block;}
+#content-header .block-menu > div > ul.menu > li.active ul {display: block; z-index: 999;}
 
 #content-header .block-menu > div > ul.menu > li ul {padding: 0;}
 #content-header .block-menu > div > ul.menu > li > ul {padding: 5px 0; background: #0d66bc url(../img/bgi/menu-shadow.jpg) left top repeat-x;}

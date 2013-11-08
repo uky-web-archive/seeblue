@@ -178,6 +178,8 @@ $menu = menu_navigation_links('main-menu');
 
           <nav id="main-menu" class="main-nav">
           
+            <?php print render($page['sidebar_first']); ?>
+
             <?php if ($is_horizontal == 0): ?>
 
               <div class="region">
@@ -195,8 +197,6 @@ $menu = menu_navigation_links('main-menu');
               </div>
 
             <?php endif; ?>
-
-            <?php print render($page['sidebar_first']); ?>
             
           </nav>
 
