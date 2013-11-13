@@ -645,6 +645,8 @@ ul.quicktabs-tabs li a:hover {
 .view-contentlist .item-list ul li a {text-decoration: underline; font-style: italic;}
 .view-contentlist .item-list ul li h2 a {text-decoration: none; font-style: normal;}
 
+.sidebar .social-icon {padding: 20px 0; border: 1px solid #DEDEDE; border-width: 1px 0;}
+.sidebar .social-icon li {padding: 3px 6px;}
 
 
 /* =End Main Content
@@ -928,7 +930,9 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.footadd-left{border-bottom:1px solid #125bb0; width:100%; padding-bottom:2.5%;}
 	.social-icon{text-align:center; clear:both; float:none; padding-top:2.8%;}
 	.social-icon li{clear:both; display:inline; float:none;}
-	.social-icon li a{display:inline-block;}
+	.social-icon li a{display:inline-block; }
+    .sidebar .social-icon li {float: left; clear: none; padding: 10px 5%; width: 15%;}
+    .sidebar .social-icon li a{display:block; float: left;}
 	.copyright{padding:28px 0 28px;}
 	.foot-logo{float:none; margin:0 auto; width:70%; display:block; background: none; height: auto; text-indent: 0;}
 	.copytext{background:none; width:100%; padding:3.5% 0 0; text-align:center;}
@@ -1134,3 +1138,103 @@ fieldset { border: none; margin: 0; padding: 0; }
 .social-icon a.twitter:hover {
 	background-position: -406px -29px;
 }
+
+.sidebar .social-icon a {
+    display:block;
+    height:29px;
+    width:29px;
+    cursor:pointer;
+    text-indent:-999em;
+}
+.sidebar .social-icon a.myspace {
+    background:url("../img/sbspritedark.png") no-repeat 0 0 transparent;
+}
+.sidebar .social-icon a.myspace:hover {
+    background-position: 0 -29px;
+}
+.sidebar .social-icon a.email {
+    background:url("../img/sbspritedark.png") no-repeat -29px 0 transparent;
+}
+.sidebar .social-icon a.email:hover {
+    background-position: -29px -29px;
+}
+.sidebar .social-icon a.podcast {
+    background:url("../img/sbspritedark.png") no-repeat -58px 0 transparent;
+}
+.sidebar .social-icon a.podcast:hover {
+    background-position: -58px -29px;
+}
+.sidebar .social-icon a.googleplus {
+    background:url("../img/sbspritedark.png") no-repeat -145px 0 transparent;
+}
+.sidebar .social-icon a.googleplus:hover {
+    background-position: -145px -29px;
+}
+.sidebar .social-icon a.squigly {
+    background:url("../img/sbspritedark.png") no-repeat -116px 0 transparent;
+}
+.sidebar .social-icon a.squigly:hover {
+    background-position: -116px -29px;
+}
+.sidebar .social-icon a.reddit {
+    background:url("../img/sbspritedark.png") no-repeat -87px 0 transparent;
+}
+.sidebar .social-icon a.reddit:hover {
+    background-position: -87px -29px;
+}
+.sidebar .social-icon a.pinterest {
+    background:url("../img/sbspritedark.png") no-repeat -174px 0 transparent;
+}
+.sidebar .social-icon a.pinterest:hover {
+    background-position: -174px -29px;
+}
+.sidebar .social-icon a.rss {
+    background:url("../img/sbspritedark.png") no-repeat -203px 0 transparent;
+}
+.sidebar .social-icon a.rss:hover {
+    background-position: -203px -29px;
+}
+/**************/
+.sidebar .social-icon a.linkedin {
+    background:url("../img/sbspritedark.png") no-repeat -232px 0 transparent;
+}
+.sidebar .social-icon a.linkedin:hover {
+    background-position: -232px -29px;
+}
+.sidebar .social-icon a.twitter-t {
+    background:url("../img/sbspritedark.png") no-repeat -261px 0 transparent;
+}
+.sidebar .social-icon a.twitter-t:hover {
+    background-position: -261px -29px;
+}
+.sidebar .social-icon a.instagram {
+    background:url("../img/sbspritedark.png") no-repeat -348px 0 transparent;
+}
+.sidebar .social-icon a.instagram:hover {
+    background-position: -348px -29px;
+}
+.sidebar .social-icon a.youtube {
+    background:url("../img/sbspritedark.png") no-repeat -319px 0 transparent;
+}
+.sidebar .social-icon a.youtube:hover {
+    background-position: -319px -29px;
+}
+.sidebar .social-icon a.flickr {
+    background:url("../img/sbspritedark.png") no-repeat -290px 0 transparent;
+}
+.sidebar .social-icon a.flickr:hover {
+    background-position: -290px -29px;
+}
+.sidebar .social-icon a.facebook {
+    background:url("../img/sbspritedark.png") no-repeat -377px 0 transparent;
+}
+.sidebar .social-icon a.facebook:hover {
+    background-position: -377px -29px;
+}
+.sidebar .social-icon a.twitter {
+    background:url("../img/sbspritedark.png") no-repeat -406px 0 transparent;
+}
+.sidebar .social-icon a.twitter:hover {
+    background-position: -406px -29px;
+}
+

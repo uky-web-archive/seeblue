@@ -196,6 +196,27 @@ $(document).ready(function(){
             $(".rslides_tabs").css("display", "block");
 
         }
+
+        if ($(".flexslider").length > 0) {
+
+            //get the height of the images in the slider
+            var img_height = $(".flexslider .slides li:first-child img").css("height");
+
+            //convert "px" string to integer
+            img_height = img_height.substr(0, img_height.length-2) * 1;
+
+            //get the height of the pager
+            var pager_height = $(".flexslider .flex-control-nav").css("height");
+            console.log(pager_height);
+            //convert "px" string to integer
+            pager_height = pager_height.substr(0, pager_height.length-2) * 1;
+
+            //calculate the final position of the pager (includes 10 px of padding)
+            var pager_top = (img_height - 40) + 'px';
+
+            $(".flexslider .flex-control-nav").css("top", pager_top);
+            $(".flexslider .flex-control-nav").css("display", "block");
+        }
     }
 
 

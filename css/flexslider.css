@@ -100,22 +100,33 @@ html[xmlns] .slides {display: block;}
 .flex-control-thumbs img:hover {opacity: 1;}
 .flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
 
+@media screen and (max-width: 1280px) {
+    .flexslider .slides li .slide-content h2 {font-size: 30px; line-height: 30px; padding-bottom: 15px;}
+}
+
+@media screen and (max-width: 960px) {
+    .flexslider .slides li .slide-content h2 {font-size: 18px; line-height: 18px; padding-bottom: 5px;}
+}
+
 @media screen and (max-width: 860px) {
+
+    .flexslider .slides li .slide-content .slide-caption {}
   .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
   .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+    .flexslider .slides li .slide-content {float: left; width: 45%; padding: 10px 5% 10px 10%; margin-top: -100px; position: absolute; height: 80px; }
 }
 
 @media (max-width: 640px) {
 
-    .flexslider .slides li .slide-content {float: left; width: 45%; padding: 10px 5% 10px 10%; margin-top: -60px; position: absolute; height: 40px; }
-    .flexslider .slides li .slide-content h2 {font-size: 24px;}
-    .flexslider .slides li .slide-content .slide-caption {display: none;}
+    .flexslider .slides li .slide-content {float: left; padding: 10px 5% 10px 10%; margin-top: 0px; position: relative; height: 60px; background: none; height: auto; width: 85%;}
+    .flexslider .slides li .slide-content h2 {font-size: 18px; line-height: 18px; padding-bottom: 5px; color: #00479A; text-shadow: none;}
+    .flexslider .slides li .slide-content .slide-caption {color: #444; text-shadow: none; height: auto;}
 
     .flex-direction-nav a {width: 32px; height: 32px;}
 
 }
 
 @media (max-width: 480px) {
-    .flexslider .slides li .slide-content {height: 20px; margin-top: -40px;}
+    /*.flexslider .slides li .slide-content {height: 20px; margin-top: -40px;}*/
     .flexslider .slides li .slide-content h2 {font-size: 16px; line-height: 20px;}
 }
