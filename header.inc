@@ -17,6 +17,8 @@ if(strpos($bgfile,'-tile') !== false) {
 	$background = "#3671b6 url(" . file_create_url($bgfile) . ") left center no-repeat;";
 	$bgsize = "cover;"; 
 }
+
+$fp = variable_get('site_frontpage', 'node');
 ?>
 <style type="text/css">
 	#header { 
@@ -32,7 +34,7 @@ if(strpos($bgfile,'-tile') !== false) {
 		<div class="wrap-inner section cf"> 
 			<!-- start logo -->
 			<h1 class="alignleft" id="logo">
-			<a title="KENTUCKY" href="/"><img title="KENTUCKY" alt="<?php echo theme_get_setting('front_logo_alt'); ?>" src="<?php print $o; ?>"></a>
+			<a title="KENTUCKY" href="<?php echo $fp; ?>"><img title="KENTUCKY" alt="<?php echo theme_get_setting('front_logo_alt'); ?>" src="<?php print $o; ?>"></a>
 			</h1>
 			<!-- end logo -->
 			<div class="head-right alignright">

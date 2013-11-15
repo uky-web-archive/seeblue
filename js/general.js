@@ -117,7 +117,7 @@ $(document).ready(function(){
 
 
 	//toggle the display of child links when a parent is clicked
-	$("#sidebar-first .block-menu .parentlink > a").click(function() {
+	$(".sidebar-menu .block-menu .parentlink > a").click(function() {
 		if ($(window).innerWidth() > 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
@@ -230,7 +230,7 @@ $(document).ready(function(){
     When the main nav menu is in the sidebar, expand the nested menus as appropriate to show the current page's link
      */
     if ($(window).innerWidth() > 640 ) {
-        $("#sidebar-first #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
+        $(".sidebar-menu #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
     }
 
 	

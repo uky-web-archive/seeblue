@@ -176,32 +176,32 @@ $menu = menu_navigation_links('main-menu');
         <!-- start first sidebar -->
         <aside id="sidebar-first" class="sidebar alignleft">
 
-          <nav id="main-menu" class="main-nav">
-          
-            <?php print render($page['sidebar_first']); ?>
-
-            <?php if ($is_horizontal == 0): ?>
-
-              <div class="region">
-
-                <div class="block-menu" id="block-system-main-menu">
-
-                  <div class="content">
-
-                    <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            <?php endif; ?>
-            
-          </nav>
+          <?php print render($page['sidebar_first']); ?>
 
         </aside>
         <!-- end first sidebar -->
+      <?php endif; ?>
+
+      <?php if ($is_horizontal == 0): ?>
+
+        <nav id="main-menu" class="main-nav alignleft sidebar-menu">
+
+          <div class="region">
+
+            <div class="block-menu" id="block-system-main-menu">
+
+              <div class="content">
+
+                <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </nav>
+
       <?php endif; ?>
 
       <?php if ($page['sidebar_second']): ?>

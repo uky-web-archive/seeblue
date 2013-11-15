@@ -253,7 +253,7 @@ html, body, #page{height:100%;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
 #main-wrapper {padding:0px 0 31px; min-height:500px;}
 #content {width:68%; padding:0;}
-#sidebar-first, #sidebar-second {width:32%; padding-top: 20px;}
+#sidebar-first, #sidebar-second, #main-menu {width:32%; padding-top: 20px;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
@@ -305,11 +305,11 @@ html, body, #page{height:100%;}
 .block-menu .menu li li.active > a{color:#00479A; background:#f1f1f1 url(../img/bgi/sprites.png) no-repeat right -102px;}
 .block-menu .menu li li li.active > a{color:#777777;}
 .block-menu .menu li li li li.active > a{color:#4076a3; background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
-#sidebar-first .block-menu .menu li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -178px;}
-#sidebar-first .block-menu .menu li li a:hover, #sidebar-first .block-menu .menu li li a.active:first-child {background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
+.sidebar-menu .block-menu .menu li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -178px;}
+.sidebar-menu .block-menu .menu li li a:hover, .sidebar-menu .block-menu .menu li li a.active:first-child {background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
 
-#sidebar-first .block-menu .menu li.parentlink > a:hover{background-position: right -102px;}
-#sidebar-first .block-menu .menu li.parentlink li.parentlink > a:hover{background-position: right -105px;}
+.sidebar-menu .block-menu .menu li.parentlink > a:hover{background-position: right -102px;}
+.sidebar-menu .block-menu .menu li.parentlink li.parentlink > a:hover{background-position: right -105px;}
 
 #content-header .block-menu {width: 970px; margin: 0 auto; position: relative;}
 #content-header .block-menu > div > ul.menu {border: 1px solid #8AA3B8; border-width: 1px 0 0 1px; padding: 0;}
@@ -645,8 +645,8 @@ ul.quicktabs-tabs li a:hover {
 .view-contentlist .item-list ul li a {text-decoration: underline; font-style: italic;}
 .view-contentlist .item-list ul li h2 a {text-decoration: none; font-style: normal;}
 
-.sidebar .social-icon {padding: 20px 0; border: 1px solid #DEDEDE; border-width: 1px 0;}
-.sidebar .social-icon li {padding: 3px 6px;}
+.sidebar .social-icon {padding: 20px 0; border: 1px solid #DEDEDE; border-width: 1px 0; text-align: center;}
+.sidebar .social-icon li {padding: 3px 6px; display: inline-block; float: none;}
 
 
 /* =End Main Content
