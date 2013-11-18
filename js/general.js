@@ -207,7 +207,7 @@ $(document).ready(function(){
 
             //get the height of the pager
             var pager_height = $(".flexslider .flex-control-nav").css("height");
-            console.log(pager_height);
+
             //convert "px" string to integer
             pager_height = pager_height.substr(0, pager_height.length-2) * 1;
 

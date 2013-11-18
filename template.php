@@ -80,7 +80,7 @@ function seeblue_preprocess_views_view(&$variables)
   // if we have a slideshow view, add the appropriate scripts and stylesheets
   if ($variables['view']->human_name == "slideshow_output")
   {
-    drupal_add_css('sites/all/themes/seeblue/css/flexslider.css');
+    drupal_add_css(path_to_theme() . '/css/flexslider.css');
 //    drupal_add_js('sites/all/themes/seeblue/js/responsiveslides.min.js');
   }
 }

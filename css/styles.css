@@ -645,7 +645,7 @@ ul.quicktabs-tabs li a:hover {
 .view-contentlist .item-list ul li a {text-decoration: underline; font-style: italic;}
 .view-contentlist .item-list ul li h2 a {text-decoration: none; font-style: normal;}
 
-.sidebar .social-icon {padding: 20px 0; border: 1px solid #DEDEDE; border-width: 1px 0; text-align: center;}
+.sidebar .social-icon {padding: 20px 0; border: 1px solid #DEDEDE; border-width: 1px 0; text-align: center; width: 100%;}
 .sidebar .social-icon li {padding: 3px 6px; display: inline-block; float: none;}
 
 

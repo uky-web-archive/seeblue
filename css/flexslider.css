@@ -122,7 +122,7 @@ html[xmlns] .slides {display: block;}
     .flexslider .slides li .slide-content h2 {font-size: 18px; line-height: 18px; padding-bottom: 5px; color: #00479A; text-shadow: none;}
     .flexslider .slides li .slide-content .slide-caption {color: #444; text-shadow: none; height: auto;}
 
-    .flex-direction-nav a {width: 32px; height: 32px;}
+    .flex-direction-nav a {display: none;}
 
 }
 
