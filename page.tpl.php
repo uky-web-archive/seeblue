@@ -176,17 +176,22 @@
 
           </section>
 
+
+        <?php
+          $fid = theme_get_setting('interior_logo');
+          $file = file_load($fid);
+          $o = file_create_url($file->uri);
+        ?>
+
+        <div class="sidebar alignleft" id="interior-logo">
+
+          <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
+
+        </div>
+
         <?php if ($page['sidebar_first']): ?>
           <!-- start first sidebar -->
           <aside id="sidebar-first" class="sidebar alignleft">
-
-          <?php
-            $fid = theme_get_setting('interior_logo');
-            $file = file_load($fid);
-            $o = file_create_url($file->uri);
-          ?>
-
-            <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
 
             <?php print render($page['sidebar_first']); ?>
 

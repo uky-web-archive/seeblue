@@ -253,7 +253,7 @@ html, body, #page{height:100%;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
 #main-wrapper {padding:0px 0 31px; min-height:500px;}
 #content {width:68%; padding:0;}
-#sidebar-first, #sidebar-second, #main-menu {width:32%; padding-top: 20px;}
+#sidebar-first, #sidebar-second, #main-menu, #interior-logo {width:32%; padding-top: 20px;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
@@ -530,7 +530,7 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 	padding-bottom: 10px;
 }
 
-#sidebar-first img, #sidebar-second img, #sidebar-right img {margin: 5px 0; width: 100%; height: auto;}
+#sidebar-first img, #sidebar-second img, #sidebar-right img, #interior-logo img {margin: 5px 0; width: 100%; height: auto;}
 
 #sidebar-second .block-block {
 	margin: 20px 0;
