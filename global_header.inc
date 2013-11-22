@@ -37,7 +37,6 @@
   <ul class="topRightLink alignleft">
     <?php
 
-    //echo $drupalpath . "/top_nav.json";
       foreach ($data->global_links as $l)
       {
         $link = '<li>';
@@ -47,14 +46,19 @@
       }
     ?>
   </ul>
-  <form class="searchform alignright">
+
+
+  <a href="javascript:void(0);" id="mobile-search-toggle"></a>
+
+  <form class="searchform alignright" action="http://ukcc.uky.edu/cse/">
     <fieldset>
       <label class="alignleft">
-        <input type="text" placeholder="search uky.edu"/>
+        <input type="text" placeholder="search uky.edu" name="q"/>
       </label>
-      <button class="alignleft" type="button">Search</button>
+      <button class="alignleft" type="submit" id="global-search">Search</button>
     </fieldset>
   </form>
+
   <ul class="top-link alignright">
     <?php
       foreach ($data->meta_links as $l)
@@ -67,9 +71,3 @@
     ?>
   </ul>
 </div>
-
-<?php
-
-
-
-?>

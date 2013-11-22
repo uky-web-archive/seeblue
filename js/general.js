@@ -11,34 +11,15 @@ $(document).ready(function(){
     $(".mobile-menu ul.menu").css("display", "none");
 
 
-    /*
-        !!!DEPRECATED!!!
-     Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
-     */
-    if (typeof $(".rslides").responsiveSlides == 'function')
-    {
-        //use this variable to toggle the pager for the slideshow - if we have a pager add the margin-bottom to the pager instead of the slideshow itself
-        var hasPager = true;
-
-        $(".rslides").responsiveSlides({
-            pager: hasPager,
-            nav: true,
-            prevText: "",
-            nextText: "",
-            timeout: 10000
-        });
-
-        setTimeout(position_pager, 1000);
-
-        //(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
-    }
-
     //  if the markup and scripts for the slider are in place, initialize it
     if (typeof $(".flexslider").flexslider == 'function') {
         $('.flexslider').flexslider({
             prevText: "",
             nextText: ""
         });
+
+
+        setTimeout(position_pager, 1000);
     }
 
 	if(typeof(Modernizr) != 'undefined' && !Modernizr.input.placeholder){
@@ -176,27 +157,6 @@ $(document).ready(function(){
 
     function position_pager()
     {
-        //figure out where to position the slideshow pager based on the height of the images
-        if ($('.rslides').length > 0)
-        {
-            //get the height of the images in the slider
-            var img_height = $(".rslides li:first-child img").css("height");
-            //convert "px" string to integer
-            img_height = img_height.substr(0, img_height.length-2) * 1;
-
-            //get the height of the pager
-            var pager_height = $(".rslides_tabs").css("height");
-            //convert "px" string to integer
-            pager_height = pager_height.substr(0, pager_height.length-2) * 1;
-
-            //calculate the final position of the pager (includes 10 px of padding)
-            var pager_top = (img_height - pager_height - 10) + 'px';
-
-            $(".rslides_tabs").css("top", pager_top);
-            $(".rslides_tabs").css("display", "block");
-
-        }
-
         if ($(".flexslider").length > 0) {
 
             //get the height of the images in the slider
@@ -217,6 +177,7 @@ $(document).ready(function(){
             $(".flexslider .flex-control-nav").css("top", pager_top);
             $(".flexslider .flex-control-nav").css("display", "block");
         }
+        
     }
 
 
@@ -233,5 +194,22 @@ $(document).ready(function(){
         $(".sidebar-menu #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
     }
 
-	
+
+
+
+    $("#mobile-search-toggle").click(function() {
+
+        if ($('.searchform input[name="q"]').val().length > 0 && $(".searchform").css("display") == 'block') {
+
+            $("form.searchform").submit();
+
+        }
+        else {
+
+            $(".wrap-inner .searchform").slideToggle();
+
+        }
+
+    });
+
 });

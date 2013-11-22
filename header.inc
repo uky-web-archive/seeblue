@@ -24,9 +24,9 @@ $fp = variable_get('site_frontpage', 'node');
 	#header { 
 		background: #3671b6; 
 	}
-	#header<?php print $whichheader; ?> {
-		background: <?php print $background; ?>
-		background-size: <?php print $bgsize; ?>
+	#header <?php print $whichheader; ?> {
+		background: <?php print $background; ?>;
+		background-size: <?php print $bgsize; ?>;
 	}
 </style>
 <header id="header">

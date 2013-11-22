@@ -148,6 +148,18 @@
 
       <?php endif; ?>
 
+        <?php
+        $fid = theme_get_setting('interior_logo');
+        $file = file_load($fid);
+        $o = file_create_url($file->uri);
+        ?>
+
+        <div id="mobile-interior-logo" class="alignleft">
+
+          <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
+
+        </div>
+
         <div id="main" class="wrap-inner cf">
 
           <?php if ($page['sidebar_right'] && $is_sidebar == FALSE): ?>
@@ -176,12 +188,6 @@
 
           </section>
 
-
-        <?php
-          $fid = theme_get_setting('interior_logo');
-          $file = file_load($fid);
-          $o = file_create_url($file->uri);
-        ?>
 
         <div class="sidebar alignleft" id="interior-logo">
 
