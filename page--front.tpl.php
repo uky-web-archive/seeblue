@@ -101,7 +101,7 @@ $menu = menu_navigation_links('main-menu');
 
 <div class="mobile-menu">
 
-  <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+  <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
 
 </div>
 
@@ -130,7 +130,7 @@ $menu = menu_navigation_links('main-menu');
           
             <div class="content">
         
-    		  <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+    		  <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
               
             </div>
           
@@ -192,7 +192,7 @@ $menu = menu_navigation_links('main-menu');
 
               <div class="content">
 
-                <?php print drupal_render(menu_tree_output(menu_tree_all_data('main-menu'))); ?>
+                <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
 
               </div>
 

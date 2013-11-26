@@ -56,11 +56,6 @@ $(document).ready(function(){
 		//$("#block-system-main-menu .content").append(secondary_menu);
 	}
 
-	
-	$("#block-system-main-menu ul.menu a.active:first").siblings("ul.menu").each(function (index) {
-		$(this).css("display", "block");
-		return false;
-	});
 
 
 	// toggle the display of the menu when in reponsive mobile layout
@@ -84,6 +79,13 @@ $(document).ready(function(){
 		}
 	});
 
+
+
+
+    $("#block-system-main-menu ul.menu a.active:first").siblings("ul.menu").each(function (index) {
+        $(this).css("display", "block");
+        return false;
+    });
 
 	//$('.menu li.parentlink > a').attr('href', 'javascript:void(0);');
 
