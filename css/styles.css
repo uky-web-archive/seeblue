@@ -203,6 +203,17 @@ h1.page-header,
 	padding: 3px;
 	max-width: 100%;
 }
+.field-name-body img[align="left"],
+.field-name-body img[style*="float: left"],
+.field-name-body img[style*="float:left"] {
+    margin: 1em 1em 1em 0;
+}
+.field-name-body img[align="right"],
+.field-name-body img[style*="float:right"],
+.field-name-body img[style*="float: right"] {
+    margin: 1em 0 1em 1em;
+}
+
 .field-name-body img.no-border {
 	border: none;
 }
