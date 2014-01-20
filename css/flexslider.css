@@ -44,9 +44,11 @@
 .flexslider .slides li .slide-content .slide-caption {color: #fff; font-style: italic; height: 6em; overflow: hidden; font-family: 'HelveticaNeue-Roman'; line-height: 1.2em;}
 
 /* styles for slider outside of showcase region */
-#main .flexslider .slides li .slide-content {padding: 10px 5% 10px 10%; height: 60px; margin-top: -80px;}
-#main .flexslider .slides li .slide-content h2 {font-size: 20px; line-height: 20px; padding-bottom: 5px;}
-#main .flexslider .slides li .slide-content .slide-caption {font-size: 12px; height: 3em; line-height: 1em;}
+#main .flexslider .slides li .slide-content {padding: 10px 0; height: 60px; margin-top: 0px; position: relative; width: 100%;
+    background: none; text-shadow: none; background-color: #F7F7F7;}
+#main .flexslider .slides li .slide-content h2 {font-size: 20px; line-height: 20px; padding-bottom: 5px; display: none;}
+#main .flexslider .slides li .slide-content .slide-caption {font-size: 14px; height: 3em; line-height: 1em; color: #444;
+    font-style: normal;}
 #main .flex-direction-nav a {width: 27px; height: 47px;}
 
 /* Clearfix for the .slides element */
