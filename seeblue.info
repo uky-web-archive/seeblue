@@ -44,3 +44,6 @@ settings[site_logo] = logo2x-kentucky.png
 settings[background_logo_path] = search-icon.png
 settings[search_placeholder] = Search this site
 settings[interior_logo] = treasurer_logo.png
+
+settings[site_font_size] = 14
+settings[sidebar_menu_font_size] = 16
