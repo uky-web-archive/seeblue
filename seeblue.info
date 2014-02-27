@@ -39,12 +39,16 @@ regions[footer_social_media] = Footer Social Media
 regions[copyright] = Copyright
 
 ;custom settings - DO NOT EDIT - PROVIDES DEFAULTS FOR THE DRUPAL ADMIN TEMPLATE SETTINGS
-settings[site_description] = Default text
+
 settings[site_logo] = logo2x-kentucky.png
-settings[background_logo_path] = search-icon.png
+settings[front_logo] = /img/front-logo-default.png
+settings[interior_logo] = /img/interior-logo-default.png
+settings[background_logo_path] = /img/header-bg.png
 settings[search_placeholder] = Search this site
-settings[interior_logo] = treasurer_logo.png
+
 
 settings[site_font_size] = 14
 settings[header_menu_font_size] = 14
 settings[sidebar_menu_font_size] = 16
+
+

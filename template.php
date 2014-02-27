@@ -3,21 +3,28 @@
 /*
 * Initialize theme settings
 */
-if ( is_null( theme_get_setting( 'site_description' ) ) || is_null ( theme_get_setting( 'background_logo_path' ) ) )
+
+// print_r(debug_backtrace());
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if ( is_null( theme_get_setting( 'site_description' ) ) )
 {
   global $theme_key;
-
   /*
   * The default values for the theme variables. Make sure $defaults exactly
   * matches the $defaults in the theme-settings.php file.
   */
   $defaults = array(             // <-- change this array
-    'site_description' 		=> theme_get_setting('site_description'),
-    'background_logo_path'	=> theme_get_setting('background_logo_path')
+    'background_logo_path'	=> drupal_get_path('theme',$GLOBALS['theme']) . theme_get_setting('background_logo_path'),
+    'site_description' => " ",
+    'front_logo' => seeblue_save_file( theme_get_setting("front_logo")),
+    'interior_logo' => seeblue_save_file(theme_get_setting("interior_logo"))
   );
-/*
+
+
   // Get default theme settings.
-  $settings = theme_get_settings($theme_key);
+  $settings = variable_get(str_replace('/', '_', 'theme_'. $theme_key .'_settings'), array());
 
   // Don't save the toggle_node_info_ variables.
   if (module_exists('node'))
@@ -36,12 +43,13 @@ if ( is_null( theme_get_setting( 'site_description' ) ) || is_null ( theme_get_s
   );
 
   // Force refresh of Drupal internals.
-  theme_get_setting('', TRUE);
-*/
-}
+  //theme_get_setting('', TRUE);
+
+  //Reset the theme_get_setting static cache, so initialized defaults are immediately rendered.
+  drupal_static_reset('theme_get_setting');
 
 
-
+} 
 
 /**
  *
@@ -125,4 +133,28 @@ function seeblue_form_alter(&$form, &$form_state, $form_id)
 	$form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/img/search-iconbg.png');
   }
 
+}
+
+
+/**
+*Private theme function to create a file record
+*/
+function seeblue_save_file($uri)
+{
+global $user;
+$uri = drupal_get_path('theme',$GLOBALS['theme']) . $uri;
+$filename = end((explode('/', $uri)));
+
+$file = new stdClass;
+$file->uid = $user->uid;
+$file->filename = $filename;
+$file->uri = $uri;
+$file->filemime = file_get_mimetype($uri);
+$file->filesize = filesize($uri);
+$file->status = 1;
+file_save($file);
+
+file_usage_add($file, $GLOBALS['theme'], 'user', '1');
+
+return $file->fid;
 }

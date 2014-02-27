@@ -1,7 +1,6 @@
 <?php
 
 $description = theme_get_setting("site_description");
-
 $fid = theme_get_setting('front_logo');
 $file = file_load($fid);
 $o = file_create_url($file->uri);
