@@ -35,9 +35,8 @@ function seeblue_form_system_theme_settings_alter(&$form, $form_state)
 	unset($form['logo']['settings']);
 
 	//add the logo upload and path fields back into the updated form object
-	$form['logo']['logo_path'] = $lp;
-	$form['logo']['logo_upload'] = $lu;
-  
+	// $form['logo']['logo_path'] = $lp;
+	// $form['logo']['logo_upload'] = $lu;
   
 
 
@@ -267,6 +266,8 @@ function seeblue_settings_submit($form, &$form_state)
 //	drupal_set_message(print_r($form_state, 1));
 	
 	$form_state['values']['background_logo_path'] = $form_state['values']['background_logo_select'];
+
+ // die(var_dump($form_state['values']['front_logo']));
 
     if ($form_state['values']['interior_logo'] != 0)
     {
