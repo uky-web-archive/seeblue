@@ -83,6 +83,20 @@ function seeblue_form_system_theme_settings_alter(&$form, $form_state)
       ),
       '#default_value'  => theme_get_setting('background_logo_select')
   );
+
+
+  $form['logo']['header_background_image'] = array(
+    '#type' 				=> 'managed_file',
+    '#title'				=> t('Image to use on background of homepage.'),
+    '#required'				=> FALSE,
+    '#upload_location'		=> file_default_scheme() . '://theme/logos/',
+    '#description'			=> t('If you would rather use a custom image instead of the pre-defined list of options above, use this field to upload one. If there is an image in this field it will overwrite the predefined options. Images must be 970 x 170 pixels.'),
+    '#default_value'		=> theme_get_setting('header_background_image'),
+    '#upload_validators'	=> array(
+      'file_validate_extensions'		=> array('gif png jpg jpeg'),
+    ),
+
+  );
   
     $form['logo']['front_logo'] = array(
         '#type' 				=> 'managed_file',
@@ -273,6 +287,18 @@ function seeblue_settings_submit($form, &$form_state)
 
         variable_set('front_logo', $f->uri);
 	}
+
+  if ($form_state['values']['header_background_image'] != 0)
+  {
+    $f = file_load($form_state['values']['header_background_image']);
+    $f->status = FILE_STATUS_PERMANENT;
+    file_save($f);
+    file_usage_add($f, 'user', 'user', 0);
+
+    variable_set('header_background_image', $f->uri);
+
+    drupal_set_message(file_validate_image_resolution($f, '970x170', '969x169'));
+  }
   
 }
 

@@ -58,7 +58,7 @@ table {	border-collapse: collapse; border-spacing: 0;}
 --------------------------------------------------------------------------------------------------*/
 
 hr { display:block; height:1px; border:0; margin:1em 0; padding:0; border-top:1px solid #cccccc; /* change border colour to suit your needs */ }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio, canvas, video { display: inline-block; display: inline; zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 html { overflow-y: scroll; font-size: 100%;}
@@ -86,11 +86,11 @@ svg:not(:root) { overflow: hidden; }
 figure { margin: 0; }
 form { margin: 0; }
 fieldset { border: none; margin: 0; padding: 0; }
-legend { border: 0; padding: 0; white-space: normal; *margin-left: -7px;}
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+legend { border: 0; padding: 0; white-space: normal; margin-left: -7px;}
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; vertical-align: middle; }
 button, input { line-height: normal; }
 button{ border: 0; padding: 0; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance:none; -webkit-border-radius:0; *overflow: visible; -webkit-border-radius:0px;}
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance:none; -webkit-border-radius:0; overflow: visible; -webkit-border-radius:0px;}
 input, select { vertical-align:middle; }
 input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *height: 13px; *width: 13px;}
 input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }

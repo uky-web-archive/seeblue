@@ -2,21 +2,52 @@
 
 $description = theme_get_setting("site_description");
 
+
+$background = '';
+$bgsize = '';
+
+
+$fid = theme_get_setting('header_background_image');
+
+if ($fid > 0) {
+
+  $uri = file_create_url(file_load($fid)->uri);
+
+  $background = '#3671b6 url(' . $uri . ') center center no-repeat';
+
+  $bgsize = 'auto';
+
+}
+else {
+
+  $bgfile = theme_get_setting('background_logo_path');
+
+  if(strpos($bgfile,'-tile') !== false) {
+
+    $whichheader = "";
+
+    $background = "#3671b6 url(" . file_create_url($bgfile) . ") center center;";
+
+    $bgsize = "auto;";
+
+  } else {
+
+//	$whichheader = "-inner .wrap-inner ";
+    $whichheader = "";
+    $background = "#3671b6 url(" . file_create_url($bgfile) . ") left center no-repeat;";
+    $bgsize = "cover;";
+
+  }
+
+}
+
+
 $fid = theme_get_setting('front_logo');
 $file = file_load($fid);
 $o = file_create_url($file->uri);
-// If the filename contains the word tile, tile the background instead of centering it. 
-$bgfile = theme_get_setting('background_logo_path');
+// If the filename contains the word tile, tile the background instead of centering it.
 
-if(strpos($bgfile,'-tile') !== false) {
-	$whichheader = "";
-	$background = "#3671b6 url(" . file_create_url($bgfile) . ") center center;";
-	$bgsize = "auto;"; 
-} else {
-	$whichheader = "-inner .wrap-inner ";
-	$background = "#3671b6 url(" . file_create_url($bgfile) . ") left center no-repeat;";
-	$bgsize = "cover;"; 
-}
+
 
 $fp = variable_get('site_frontpage', 'node');
 ?>
