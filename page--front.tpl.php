@@ -282,11 +282,52 @@ $menu = menu_navigation_links('main-menu');
             <?php print render($page['copyright']); ?>
 
           <?php endif; ?>
+
+
+
+
+
+
+
+
+          <?php $apath = drupal_get_path('theme', 'seeblue'); ?>
+          <div class="copyright cf">
+
+            <a class="foot-logo alignleft" href="#" title="KENTUCKY">
+              <img src="/<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
+            </a>
+
+            <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
+              <img src="/<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
+            </a>
+
+            <?php
+
+            $text_url = '//';
+
+            if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+              $text_url .= 'https://';
+            }
+            else {
+              $text_url .= 'http://';
+            }
+
+            $text_url .= $_SERVER['SERVER_NAME'];
+            $text_url .= $_SERVER['REQUEST_URI'];
+
+            ?>
+
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 | An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 |<br /> An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> | <a href="http://assistive.usablenet.com/tt/<?php echo $text_url; ?>" title="Text only">Text Only</a>
 
             </div>
+
+          </div>
+
+
+
+
 
           </div>
 
