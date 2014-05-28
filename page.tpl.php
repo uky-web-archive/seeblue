@@ -304,11 +304,7 @@
 
             </div>
 
-            <?php if ($page['copyright']): ?>
 
-              <?php print render($page['copyright']); ?>
-
-            <?php endif; ?>
 
 
 

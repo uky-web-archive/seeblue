@@ -277,16 +277,6 @@ $menu = menu_navigation_links('main-menu');
 
           </div>
 
-          <?php if ($page['copyright']): ?>
-
-            <?php print render($page['copyright']); ?>
-
-          <?php endif; ?>
-
-
-
-
-
 
 
 
