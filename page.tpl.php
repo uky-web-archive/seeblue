@@ -210,7 +210,7 @@
 
         <?php if ($is_horizontal == 0): ?>
 
-          <nav id="main-menu" class="main-nav alignleft sidebar-menu">
+          <nav id="main-menu" class="main-nav alignleft sidebar">
 
             <div class="region">
 

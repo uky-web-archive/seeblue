@@ -317,11 +317,11 @@ html, body, #page{height:100%;}
 .block-menu .menu li li.active > a{color:#00479A; background:#f1f1f1 url(../img/bgi/sprites.png) no-repeat right -102px;}
 .block-menu .menu li li li.active > a{color:#777777;}
 .block-menu .menu li li li li.active > a{color:#4076a3; background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
-.sidebar-menu .block-menu .menu li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -178px;}
-.sidebar-menu .block-menu .menu li li a:hover, .sidebar-menu .block-menu .menu li li a.active:first-child {background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
+.sidebar .block-menu .menu li a:hover{background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -178px;}
+.sidebar .block-menu .menu li li a:hover, .sidebar .block-menu .menu li li a.active:first-child {background:#e7e7e7 url(../img/bgi/sprites.png) no-repeat right -181px;}
 
-.sidebar-menu .block-menu .menu li.parentlink > a:hover{background-position: right -102px;}
-.sidebar-menu .block-menu .menu li.parentlink li.parentlink > a:hover{background-position: right -105px;}
+.sidebar .block-menu .menu li.parentlink > a:hover{background-position: right -102px;}
+.sidebar .block-menu .menu li.parentlink li.parentlink > a:hover{background-position: right -105px;}
 
 .block-menu .menu:first-child {padding:0 0 25px 0; float: left; width: 100%; display: block;}
 .block-menu .menu:first-child li {float:left; width:100%; position:relative; list-style: none; margin: 0; padding: 0;}
