@@ -277,14 +277,20 @@ $menu = menu_navigation_links('main-menu');
 
           </div>
 
-          <?php if ($page['copyright']): ?>
+          <div class="copyright cf">
+            <?php $apath = path_to_theme(); ?>
 
-            <?php print render($page['copyright']); ?>
+            <a class="foot-logo alignleft" href="#" title="KENTUCKY">
+              <img src="/<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
+            </a>
 
-          <?php endif; ?>
+            <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
+              <img src="/<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
+            </a>
+
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 | An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
 
             </div>
 

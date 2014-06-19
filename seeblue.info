@@ -36,7 +36,6 @@ regions[footer_second_column] = Footer Second Column
 regions[footer_third_column] = Footer Third Column
 regions[footer] = Footer
 regions[footer_social_media] = Footer Social Media
-regions[copyright] = Copyright
 
 ;custom settings - DO NOT EDIT - PROVIDES DEFAULTS FOR THE DRUPAL ADMIN TEMPLATE SETTINGS
 
