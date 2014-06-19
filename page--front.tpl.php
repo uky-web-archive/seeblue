@@ -167,6 +167,7 @@ $menu = menu_navigation_links('main-menu');
 
           <?php print render($tabs); ?>
           <?php print render($page['homepage_content']); ?>
+           <?php print render($page['content']); ?>
 
         </div>
 
