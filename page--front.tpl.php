@@ -292,7 +292,14 @@ $menu = menu_navigation_links('main-menu');
 
               &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
 
+
             </div>
+
+          </div>
+
+
+
+
 
           </div>
 
