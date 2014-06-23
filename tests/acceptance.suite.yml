@@ -1,0 +1,30 @@
+# Codeception Test Suite Configuration
+
+# suite for acceptance tests.
+# perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+modules:
+   enabled: [WebDriver]
+   config:
+      WebDriver:
+         capabilities:
+             webStorageEnabled: true
+
+env:
+    local:
+         modules:
+             enabled: [WebDriver]
+             config:
+                 WebDriver:
+                     url: 'http://drupal.vbox.local/theme201403/'
+                     browser: phantomjs
+                     capabilities:
+                         webStorageEnabled: true
+
+    testing:
+         modules:
+            config:
+                WebDriver:
+                    url: 'http://foo/'
