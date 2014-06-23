@@ -108,8 +108,8 @@
   </div>
 
   <div class="mobile-menu">
-
-    <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
+    <?php $menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
+    <?php print drupal_render($menu); ?>
 
   </div>
 
@@ -132,7 +132,7 @@
 
               <div class="content">
 
-              <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
+              <?php print drupal_render($menu); ?>
 
               </div>
 
