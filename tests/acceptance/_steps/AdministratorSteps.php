@@ -12,6 +12,16 @@ class AdministratorSteps extends \AcceptanceTester
         $I->click(\UserLoginPage::$loginButton);
     }   
 
+
+    function activateTheme($themeName)
+    {
+    	$I = $this;
+		//$I->login('admin','admin');
+		$I->amOnPage('/admin/appearance');
+		$I->click('//a[@title="Enable '. $themeName .' as default theme"]');
+
+    }
+
     function logout()
     {
         $I = $this;

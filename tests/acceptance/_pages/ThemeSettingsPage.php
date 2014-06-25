@@ -3,7 +3,9 @@
 class ThemeSettingsPage
 {
     // include url of current page
-    static $URL = '';
+    static $URL = '/admin/appearance/settings/seeblue';
+    static $headerTextfield = "#edit-site-description";
+    static $headerBackground = "#edit-background-logo-select";
 
     /**
      * Declare UI map for this page here. CSS or XPath allowed.

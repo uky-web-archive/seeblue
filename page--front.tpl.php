@@ -83,7 +83,7 @@
  * @see html.tpl.php
  */
 $apath = $base_path . drupal_get_path('theme', 'seeblue');
-
+$tree_output = menu_tree_output(menu_tree_page_data('main-menu'));
 
 
 //flag for whether we print horizontal or vertical menu
@@ -101,7 +101,7 @@ $menu = menu_navigation_links('main-menu');
 
 <div class="mobile-menu">
 
-  <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
+  <?php print drupal_render($tree_output); ?>
 
 </div>
 
@@ -130,7 +130,7 @@ $menu = menu_navigation_links('main-menu');
           
             <div class="content">
         
-    		  <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
+    		  <?php print drupal_render($tree_output); ?>
               
             </div>
           

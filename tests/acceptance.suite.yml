@@ -15,13 +15,18 @@ modules:
 env:
     local:
          modules:
-             enabled: [WebDriver]
+             enabled: [WebDriver,Db]
              config:
                  WebDriver:
                      url: 'http://drupal.vbox.local/theme201403/'
                      browser: phantomjs
                      capabilities:
-                         webStorageEnabled: true
+                     webStorageEnabled: true
+                 Db:
+                     dsn: 'mysql:host=localhost;dbname=theme'
+                     user: 'theme'
+                     password: 'theme'
+                     dump: tests/_data/theme.sql
 
     testing:
          modules:
