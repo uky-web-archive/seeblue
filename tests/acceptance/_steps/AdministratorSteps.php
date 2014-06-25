@@ -16,10 +16,19 @@ class AdministratorSteps extends \AcceptanceTester
     function activateTheme($themeName)
     {
     	$I = $this;
-		//$I->login('admin','admin');
 		$I->amOnPage('/admin/appearance');
 		$I->click('//a[@title="Enable '. $themeName .' as default theme"]');
 
+    }
+
+    function addNode($contentType, $data){
+    	//Simple, doesn't handle special fields
+    	$I = $this;
+		$I->amOnPage('/node/add/'.$contentType);
+		foreach ($data as $fieldName => $value ){
+			$I->fillField("#".$fieldName, $value);
+		}
+		$I->click("#edit-submit");
     }
 
     function logout()
