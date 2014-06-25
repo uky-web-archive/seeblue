@@ -108,8 +108,8 @@
   </div>
 
   <div class="mobile-menu">
-    <?php $menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
-    <?php print drupal_render($menu); ?>
+    <?php $main_menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
+    <?php print drupal_render($main_menu); ?>
 
   </div>
 
@@ -132,7 +132,8 @@
 
               <div class="content">
 
-              <?php print drupal_render($menu); ?>
+                <?php $main_menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
+                <?php print drupal_render($main_menu); ?>
 
               </div>
 
@@ -179,8 +180,16 @@
             <div class="content-list cf">
 
               <div class="block site-messages"><?php print $messages;?></div>
+                <?php print render($tabs); ?>
+              <?php print render($title_prefix); ?>
+                <?php if ($title): ?>
+                  <h1 class="title page-header" id="page-title">
+                    <?php print $title; ?>
+                  </h1>
+                <?php endif; ?>
+              <?php print render($title_suffix); ?>
 
-              <?php print render($tabs); ?>
+            
 
               <?php print render($page['content']); ?>
 
