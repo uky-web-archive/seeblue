@@ -254,14 +254,14 @@ html, body, #page{height:100%;}
 .wrap-inner, .section{width:970px; margin:0 auto;}
 #header{position:relative; z-index:9;}
 #header-inner .wrap-inner{padding-top:26px; min-height:143px;}
-#header-inner .wrap-inner{padding-top:24px; position:relative;}
+#header-inner .wrap-inner{padding-top:24px; position:relative; }
 .head-uk{position:absolute; left:-45px; top:0; width:44%;}
 .head-uk img{width:100%;}
-#logo { padding:7px 4% 0 7.5%; border:none;}
-#logo { display:block; width:19.4%; padding:1.2% 5% 3.8% 7.5%; z-index:1;}
-#logo a, #logo-inner a {background:none;}
-#logo a, #logo-inner a {display:block; text-decoration:none;	}
-#logo a img, #logo-inner a img {width:100%;}
+#logo { padding:0; display:table;}
+#logo {  width:25%; float:left; min-height: 143px; margin-top: -24px;}
+#logo a, #logo-inner a {background:none; display:table-cell; vertical-align:middle; }
+#logo a, #logo-inner a { text-decoration:none; }
+#logo a img, #logo-inner a img {width:100%; }
 
 .head-right {position: relative;}
 .head-right .content {position: absolute; display: table; height: 116px;}
@@ -273,7 +273,7 @@ html, body, #page{height:100%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
 #content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; min-height: 1200px;}
-.wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top ; min-height:45px; }
+.wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top ; height:45px; }
 .head-right{width:64.6%; padding-right:1.4%;}
 .head-right{padding-right:4px; height: 116px;}
 .head-right p{color:#eeeeee; line-height:23px; font-size:16px;}

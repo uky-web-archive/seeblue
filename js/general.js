@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 
 
-    $("#block-system-main-menu ul.menu a.active:first").siblings("ul.menu").each(function (index) {
+    $(".sidebar #block-system-main-menu ul.menu a.active:first").siblings("ul.menu").each(function (index) {
         $(this).css("display", "block");
         return false;
     });
