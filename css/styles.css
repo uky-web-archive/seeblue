@@ -250,6 +250,7 @@ a:hover {text-decoration:underline;}
 --------------------------------------------------------------------------------------------------------*/
 p {padding:0 0 0px 0; margin:0;}
 html, body, #page{height:100%;}
+#page {position:relative;}
 #page-wrapper{width:100%;}
 .wrap-inner, .section{width:970px; margin:0 auto;}
 #header{position:relative; z-index:9;}
@@ -266,13 +267,13 @@ html, body, #page{height:100%;}
 .head-right {position: relative;}
 .head-right .content {position: absolute; display: table; height: 116px;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
-#main-wrapper {padding:0px 0 31px; min-height:500px;}
+#main-wrapper {padding:0px 0 630px; }
 #content {width:68%; padding:0;}
-#sidebar-first, #sidebar-second, #main-menu, #interior-logo {width:32%; padding-top: 20px;}
+#sidebar-first, #sidebar-second, #main-menu, #interior-logo {width:32%; padding-top: 20px; clear:left;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
-#content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; min-height: 1200px;}
+#content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; }
 .wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top ; height:45px; }
 .head-right{width:64.6%; padding-right:1.4%;}
 .head-right{padding-right:4px; height: 116px;}
@@ -533,6 +534,7 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 	margin-bottom: 0;
 	border-bottom: none;
 	padding: 5px 0 5px 12px;
+
     background: #2f7ec2; /* Old browsers */
     background: -moz-linear-gradient(top, #2f7ec2 0%, #1e73ba 3%, #0064b3 97%, #2d7ec1 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2f7ec2), color-stop(3%,#1e73ba), color-stop(97%,#0064b3), color-stop(100%,#2d7ec1)); /* Chrome,Safari4+ */
@@ -796,7 +798,7 @@ em, i {font-style: italic;}
 
 /* =Footer
 --------------------------------------------------------------------------------------------------*/
-#footer-wrapper{border-top:1px solid #003a7e; background:#004da8; min-height:410px;}
+#footer-wrapper{border-top:1px solid #003a7e; background:#004da8; height:500px; position:absolute; bottom:0px; width:100%;}
 .footer-top{padding:46px 2px 51px;}
 .region-footer-first-column{width:32%; padding-left:0; float: left;}
 .region-footer-second-column{width:32%; padding-left:2.3%; float: left;}
