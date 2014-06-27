@@ -831,6 +831,12 @@ em, i {font-style: italic;}
 
 /* Removing fieldset borders (remove if you want to keep the defaults defined in Normalization) */
 fieldset { border: none; margin: 0; padding: 0; }
+
+.search-form #edit-keys {height:22px;}
+.search-form .form-submit {display:inline;}
+
+
+
 /* End Forms
 --------------------------------------------------------------------------------------------------*/
 
