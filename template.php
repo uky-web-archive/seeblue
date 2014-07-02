@@ -18,8 +18,8 @@ if ( is_null( theme_get_setting( 'site_description' ) ) )
   $defaults = array(             // <-- change this array
     'background_logo_path'	=> drupal_get_path('theme',$GLOBALS['theme']) . theme_get_setting('background_logo_path'),
     'site_description' => " ",
-    'front_logo' => seeblue_save_file( theme_get_setting("front_logo")),
-    'interior_logo' => seeblue_save_file(theme_get_setting("interior_logo"))
+    'front_logo' => seeblue201407_save_file( theme_get_setting("front_logo")),
+    'interior_logo' => seeblue201407_save_file(theme_get_setting("interior_logo"))
   );
 
 
@@ -60,7 +60,7 @@ if ( is_null( theme_get_setting( 'site_description' ) ) )
  *	@author Miles Briggs
  *
  */
-function seeblue_preprocess_image(&$variables)
+function seeblue201407_preprocess_image(&$variables)
 {
   $directories = array('slideshow', 'teaser_thumb', 'page_header');
 
@@ -83,7 +83,7 @@ function seeblue_preprocess_image(&$variables)
  *
  *	@author Miles Briggs
  */
-function seeblue_preprocess_views_view(&$variables)
+function seeblue201407_preprocess_views_view(&$variables)
 {
   // if we have a slideshow view, add the appropriate scripts and stylesheets
   if ($variables['view']->human_name == "slideshow_output")
@@ -102,7 +102,7 @@ function seeblue_preprocess_views_view(&$variables)
  *	@author Miles Briggs
  *
  */
-function seeblue_preprocess_page(&$variables)
+function seeblue201407_preprocess_page(&$variables)
 {
   /**
    *	By default, drupal's main menu will only render as a single level, i.e., all child links are ignored.
@@ -122,7 +122,7 @@ function seeblue_preprocess_page(&$variables)
  *	@author Miles Briggs
  *
  */
-function seeblue_form_alter(&$form, &$form_state, $form_id)
+function seeblue201407_form_alter(&$form, &$form_state, $form_id)
 {
   if ($form_id == 'search_block_form')		//hook the search form to modify some attributes
   {
@@ -139,7 +139,7 @@ function seeblue_form_alter(&$form, &$form_state, $form_id)
 /**
 *Private theme function to create a file record
 */
-function seeblue_save_file($uri)
+function seeblue201407_save_file($uri)
 {
 global $user;
 $uri = drupal_get_path('theme',$GLOBALS['theme']) . $uri;

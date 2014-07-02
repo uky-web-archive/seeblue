@@ -1,5 +1,5 @@
-name = seeblue
-description = seeblue
+name = seeblue July 2014 release
+description = The July 2014 release of the Uk seeblue Drupal theme.
 core = "7.x"
 
 ;css

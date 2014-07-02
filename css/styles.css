@@ -251,7 +251,7 @@ a:hover {text-decoration:underline;}
 p {padding:0 0 0px 0; margin:0;}
 html, body, #page{height:100%;}
 #page {position:relative;}
-#page-wrapper{width:100%;}
+#page-wrapper{width:100%; background: #004da8; min-height:100%;}
 .wrap-inner, .section{width:970px; margin:0 auto;}
 #header{position:relative; z-index:9;}
 #header-inner .wrap-inner{padding-top:26px; min-height:143px;}
@@ -267,7 +267,7 @@ html, body, #page{height:100%;}
 .head-right {position: relative;}
 .head-right .content {position: absolute; display: table; height: 116px;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
-#main-wrapper {padding:0px 0 630px; }
+#main-wrapper {padding:0px 0 30px; background:white; }
 #content {width:68%; padding:0;}
 #sidebar-first, #sidebar-second, #main-menu, #interior-logo {width:32%; padding-top: 20px; clear:left;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
@@ -798,7 +798,7 @@ em, i {font-style: italic;}
 
 /* =Footer
 --------------------------------------------------------------------------------------------------*/
-#footer-wrapper{border-top:1px solid #003a7e; background:#004da8; height:500px; position:absolute; bottom:0px; width:100%;}
+#footer-wrapper{border-top:1px solid #003a7e; background:#004da8;   bottom:0px; width:100%;}
 .footer-top{padding:46px 2px 51px;}
 .region-footer-first-column{width:32%; padding-left:0; float: left;}
 .region-footer-second-column{width:32%; padding-left:2.3%; float: left;}

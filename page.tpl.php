@@ -227,7 +227,8 @@
 
                 <div class="content">
 
-                  <?php print drupal_render(menu_tree_output(menu_tree_page_data('main-menu'))); ?>
+                    <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu')); ?>
+                    <?php print drupal_render($tree_output); ?>
 
                 </div>
 
