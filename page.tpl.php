@@ -86,6 +86,9 @@
   /**
   * Boolean toggle for whether or not we should print the right sidebar. If either left sidebar is output, we'll ignore the right sidebar.
   */
+
+$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); 
+
   $is_sidebar = FALSE;
   if ($page['sidebar_first'] || $page['sidebar_second'])
   {

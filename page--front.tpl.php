@@ -83,6 +83,7 @@
  * @see html.tpl.php
  */
 
+$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); 
 
 //flag for whether we print horizontal or vertical menu
 $is_horizontal = theme_get_setting('use_horizontal_menu');
