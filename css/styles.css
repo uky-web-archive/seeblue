@@ -259,7 +259,7 @@ html, body, #page{height:100%;}
 .head-uk{position:absolute; left:-45px; top:0; width:44%;}
 .head-uk img{width:100%;}
 #logo { padding:20px 0; display:table;}
-#logo {  width:20%; float:left; min-height: 143px; margin-top: -24px;}
+#logo {  width:20%; float:left; min-height: 143px; margin-top: -16px;}
 #logo a, #logo-inner a {background:none; display:table-cell; vertical-align:middle; }
 #logo a, #logo-inner a { text-decoration:none; }
 #logo a img, #logo-inner a img {width:100%; }
