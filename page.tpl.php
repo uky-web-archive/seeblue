@@ -82,7 +82,6 @@
   * @see bartik_process_page()
   * @see html.tpl.php
   */
-  $apath =  $base_path . drupal_get_path('theme', 'seeblue');
 
   /**
   * Boolean toggle for whether or not we should print the right sidebar. If either left sidebar is output, we'll ignore the right sidebar.
@@ -317,7 +316,7 @@
             </div>
 
             <div class="copyright cf">
-            <?php $apath = base_path( ) . path_to_theme(); ?>
+            <?php $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); ?>
 
             <a class="foot-logo alignleft" href="#" title="KENTUCKY">
               <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
