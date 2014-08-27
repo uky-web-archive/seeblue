@@ -204,20 +204,7 @@
 
         </div>
 
-        <?php if ($page['sidebar_first']): ?>
-          <!-- start first sidebar -->
-          <aside id="sidebar-first" class="sidebar alignleft">
-
-            <?php print render($page['sidebar_first']); ?>
-
-            <?php $is_sidebar = TRUE; ?>
-
-          <!-- end first sidebar -->
-          </aside>
-
-        <?php endif; ?>
-
-        <?php if ($is_horizontal == 0): ?>
+         <?php if ($is_horizontal == 0): ?>
 
           <nav id="main-menu" class="main-nav alignleft sidebar">
 
@@ -239,6 +226,21 @@
           </nav>
 
         <?php endif; ?>
+
+        <?php if ($page['sidebar_first']): ?>
+          <!-- start first sidebar -->
+          <aside id="sidebar-first" class="sidebar alignleft">
+
+            <?php print render($page['sidebar_first']); ?>
+
+            <?php $is_sidebar = TRUE; ?>
+
+          <!-- end first sidebar -->
+          </aside>
+
+        <?php endif; ?>
+
+       
 
         <?php if ($page['sidebar_second']): ?>
         <!-- start second sidebar -->
@@ -315,14 +317,14 @@
             </div>
 
             <div class="copyright cf">
-            <?php $apath = path_to_theme(); ?>
+            <?php $apath = base_path( ) . path_to_theme(); ?>
 
             <a class="foot-logo alignleft" href="#" title="KENTUCKY">
-              <img src="/<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
+              <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
             </a>
 
             <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
-              <img src="/<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
+              <img src="<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
             </a>
 
             <div class="copytext alignright">

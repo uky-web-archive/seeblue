@@ -14,11 +14,18 @@ function seeblue201407_form_system_theme_settings_alter(&$form, $form_state)
 {
 	
   
+ // The "appearance" dialog is not necessarily called from this theme, so path_to_theme does not work.  
+ $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 
-  
-  // The "appearance" dialog is not necessarily called from this theme, so path_to_theme does not work.  
-  $theme_path = drupal_get_path('theme',$GLOBALS['theme']);
-  $file_path = $GLOBALS['base_path'] . $theme_path; 
+ // Get the base-est theme file path rather than the subtheme
+ $themes = list_themes();
+ $theme_object = $themes[variable_get('theme_default', NULL)];
+ if (isset($theme_object->base_themes)){
+  $theme_path = drupal_get_path('theme', array_keys($theme_object->base_themes)[0]);
+ }
+
+
+$file_path = $GLOBALS['base_path'] . $theme_path; 
   
   unset($form['theme_settings']);
 	

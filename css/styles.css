@@ -258,8 +258,8 @@ html, body, #page{height:100%;}
 #header-inner .wrap-inner{padding-top:24px; position:relative; }
 .head-uk{position:absolute; left:-45px; top:0; width:44%;}
 .head-uk img{width:100%;}
-#logo { padding:0; display:table;}
-#logo {  width:25%; float:left; min-height: 143px; margin-top: -24px;}
+#logo { padding:20px 0; display:table;}
+#logo {  width:20%; float:left; min-height: 143px; margin-top: -24px;}
 #logo a, #logo-inner a {background:none; display:table-cell; vertical-align:middle; }
 #logo a, #logo-inner a { text-decoration:none; }
 #logo a img, #logo-inner a img {width:100%; }
@@ -653,6 +653,7 @@ ul.quicktabs-tabs li a:hover {
 }
 .sidebar .more-link {
 	float: left;
+	clear:both;
 	margin: 0 12px 12px 12px;
 	color: #000;
 	border: 1px solid #9f9f9f;

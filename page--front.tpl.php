@@ -175,17 +175,7 @@ $menu = menu_navigation_links('main-menu');
 
       </section>
 
-      <?php if ($page['sidebar_first']): ?>
-        <!-- start first sidebar -->
-        <aside id="sidebar-first" class="sidebar alignleft">
-
-          <?php print render($page['sidebar_first']); ?>
-
-        </aside>
-        <!-- end first sidebar -->
-      <?php endif; ?>
-
-      <?php if ($is_horizontal == 0): ?>
+       <?php if ($is_horizontal == 0): ?>
 
         <nav id="main-menu" class="main-nav alignleft sidebar">
 
@@ -195,7 +185,7 @@ $menu = menu_navigation_links('main-menu');
 
               <div class="content">
 
-                            <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu'));
+             <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu'));
              print drupal_render($tree_output); ?>
 
               </div>
@@ -207,6 +197,18 @@ $menu = menu_navigation_links('main-menu');
         </nav>
 
       <?php endif; ?>
+
+      <?php if ($page['sidebar_first']): ?>
+        <!-- start first sidebar -->
+        <aside id="sidebar-first" class="sidebar alignleft">
+
+          <?php print render($page['sidebar_first']); ?>
+
+        </aside>
+        <!-- end first sidebar -->
+      <?php endif; ?>
+
+     
 
       <?php if ($page['sidebar_second']): ?>
       <!-- start second sidebar -->
@@ -282,14 +284,14 @@ $menu = menu_navigation_links('main-menu');
           </div>
 
           <div class="copyright cf">
-            <?php $apath = path_to_theme(); ?>
+            <?php $apath = base_path( ) . path_to_theme(); ?>
 
             <a class="foot-logo alignleft" href="#" title="KENTUCKY">
-              <img src="/<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
+              <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
             </a>
 
             <a class="foot-logo seeblue alignleft" href="http://seeblue.com" title="see blue.">
-              <img src="/<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
+              <img src="<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
             </a>
 
             <div class="copytext alignright">

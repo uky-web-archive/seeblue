@@ -11,6 +11,30 @@ $(document).ready(function(){
     $(".mobile-menu ul.menu").css("display", "none");
 
 
+        /*
+        !!!DEPRECATED!!!
+     Only initialize the slider plugin if we have included the script (script is automatically included when slider markup is detected - see template.php)
+     */
+    if (typeof $(".rslides").responsiveSlides == 'function')
+    {
+        //use this variable to toggle the pager for the slideshow - if we have a pager add the margin-bottom to the pager instead of the slideshow itself
+        var hasPager = true;
+
+        $(".rslides").responsiveSlides({
+            pager: hasPager,
+            nav: true,
+            prevText: "",
+            nextText: "",
+            timeout: 10000
+        });
+
+        setTimeout(position_pager, 1000);
+
+        //(hasPager == false) ? $(".rslides").css("margin-bottom", "2em") : $(".rslides_tabs").css("margin-bottom", "2em");
+    }
+
+
+
     //  if the markup and scripts for the slider are in place, initialize it
     if (typeof $(".flexslider").flexslider == 'function') {
         $('.flexslider').flexslider({
