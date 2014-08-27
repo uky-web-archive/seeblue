@@ -2,7 +2,7 @@
 
 /**
  *
- *  @function seeblue201407_form_system_theme_settings_alter - implements a hook for the seeblue theme settings - adds additional fields and rearranges existing fields for consistency
+ *  @function seeblue201408_form_system_theme_settings_alter - implements a hook for the seeblue theme settings - adds additional fields and rearranges existing fields for consistency
  *
  *  @param &$form - array that contains all the data necessary to generate the theme settings form. Passed by reference.
  *  @param $form_state - array that describes the current state of the form (e.g., any edits, updates, deletions, etc...)
@@ -10,7 +10,7 @@
  *  @author Miles Briggs
  *
  */
-function seeblue201407_form_system_theme_settings_alter(&$form, $form_state)
+function seeblue201408_form_system_theme_settings_alter(&$form, $form_state)
 {
 	
   
@@ -240,7 +240,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 
 
   //add a submit handler for the theme settings form
-  $form['#submit'][] = 'seeblue201407_settings_submit';
+  $form['#submit'][] = 'seeblue201408_settings_submit';
 
 }
 
@@ -248,14 +248,14 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 
 /**
  *
- *  @function seeblue201407_settings_submit - submit handler for theme settings form
+ *  @function seeblue201408_settings_submit - submit handler for theme settings form
  *
  *  @param $form - object that contains all the data for the theme settings form
  *  @param $form_state - array that describes the current state of the form (e.g., any edits, updates, deletions, etc...). Passed by reference.
  *
  *  @author Miles Briggs
  */
-function seeblue201407_settings_submit($form, &$form_state)
+function seeblue201408_settings_submit($form, &$form_state)
 {
 	
 	$form_state['values']['background_logo_path'] = $form_state['values']['background_logo_select'];
