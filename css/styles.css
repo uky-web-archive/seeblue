@@ -479,31 +479,11 @@ background: linear-gradient(to bottom,  #f2f2f2 0%,#e7e7e7 100%);
 	padding: 3px;
 	text-align: left;
 }
-/*
-	Since IE8 doesn't support the nth-child selector, we have to use the sibling (+) operator to add even/odd striping to wysiwyg tables.
-	These styles currently support up to 20 rows, but can be extended by copying the most specific line and adding " + tr + tr" near the end of the selector (right before the final td)
-*/
-.field-name-body table tr + tr td,
-.field-name-body table tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td {
+
+.field-name-body tbody tr:nth-child(odd) td {
 	background: #CED9ED;
 }
-.field-name-body table tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td,
-.field-name-body table tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr td {
+.field-name-body tbody tr:nth-child(even) td {
 	background: #F6F6F6;
 }
 .field-name-body .content-right-float {
