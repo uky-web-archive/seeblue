@@ -1,3 +1,28 @@
+   function position_pager()
+    {
+        if ($(".flexslider").length > 0) {
+
+            //get the height of the images in the slider
+            var img_height = $(".flexslider .slides li:first-child img").css("height");
+
+            //convert "px" string to integer
+            img_height = img_height.substr(0, img_height.length-2) * 1;
+
+            //get the height of the pager
+            var pager_height = $(".flexslider .flex-control-nav").css("height");
+
+            //convert "px" string to integer
+            pager_height = pager_height.substr(0, pager_height.length-2) * 1;
+
+            //calculate the final position of the pager (includes 10 px of padding)
+            var pager_top = (img_height - 40) + 'px';
+
+            $(".flexslider .flex-control-nav").css("top", pager_top);
+            $(".flexslider .flex-control-nav").css("display", "block");
+        }
+        
+    }
+
 // Utilizing the Modernizr object created to implement placeholder functionality
 $(document).ready(function(){
 
@@ -70,18 +95,6 @@ $(document).ready(function(){
 	}
 
 
-	//var secondary_menu = $("#block-menu-menu-secondary-navigation .menu").html();
-
-	//secondary_menu = '<ul class="menu secondary-menu">' + secondary_menu + '</ul>';
-
-	
-	if ($(window).innerWidth() <= 640)
-	{
-		//$("#block-system-main-menu .content").append(secondary_menu);
-	}
-
-
-
 	// toggle the display of the menu when in reponsive mobile layout
 	$('.menulink').click(function(){
 		//$('.block-menu .menu:first-child').slideToggle("fast");
@@ -93,11 +106,13 @@ $(document).ready(function(){
 
 	//add class to menu list elements (li) based on whether they are parents or leaves
 //	$('.block-menu .menu li').each(function(index) {
+
 	$('.menu li').each(function(index) {
 		if ($(this).children().length < 2) { 						  
 			$(this).addClass('plainlink');	//add 'plainlink' class to leaves
 		}
 		else {
+
 			$(this).addClass('parentlink');	//add 'parentlink' class to parents
             $(this).children('a').attr('href', 'javascript:void(0);');
 		}
@@ -115,7 +130,7 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$(".parentlink > a").click(function(e) {
-		if ($(window).innerWidth() <= 640)
+		if ($(window).height() <= 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
@@ -125,14 +140,14 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$(".sidebar .block-menu .parentlink > a").click(function() {
-		if ($(window).innerWidth() > 640)
+		if ($(window).height() > 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
 	});
 	
 	$("#content-header .block-menu > .content > .menu > li").mouseover(function() {
-		if ($(window).innerWidth() > 640)
+		if ($(window).height() > 640)
 		{
 			$(this).addClass("active");
 		}
@@ -159,7 +174,7 @@ $(document).ready(function(){
 		Check the window size when it's re-sized to see if we need to hide/show the menu
 	*/
 	$(window).resize(function() {
-		if ($(window).innerWidth() > 640)	//minimum window width for desktop layout
+		if ($(window).height() > 640)	//minimum window width for desktop layout
 		{
 			$(".block-menu .menu:first-child").css("display", "block");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "block");
@@ -181,30 +196,7 @@ $(document).ready(function(){
 	});
 
 
-    function position_pager()
-    {
-        if ($(".flexslider").length > 0) {
-
-            //get the height of the images in the slider
-            var img_height = $(".flexslider .slides li:first-child img").css("height");
-
-            //convert "px" string to integer
-            img_height = img_height.substr(0, img_height.length-2) * 1;
-
-            //get the height of the pager
-            var pager_height = $(".flexslider .flex-control-nav").css("height");
-
-            //convert "px" string to integer
-            pager_height = pager_height.substr(0, pager_height.length-2) * 1;
-
-            //calculate the final position of the pager (includes 10 px of padding)
-            var pager_top = (img_height - 40) + 'px';
-
-            $(".flexslider .flex-control-nav").css("top", pager_top);
-            $(".flexslider .flex-control-nav").css("display", "block");
-        }
-        
-    }
+ 
 
 
 	$("#tabs").tabs();
@@ -216,7 +208,7 @@ $(document).ready(function(){
     /*
     When the main nav menu is in the sidebar, expand the nested menus as appropriate to show the current page's link
      */
-    if ($(window).innerWidth() > 640 ) {
+    if ($(window).height() > 640 ) {
         $(".sidebar #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
     }
 
