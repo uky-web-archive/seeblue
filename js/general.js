@@ -130,7 +130,7 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$(".parentlink > a").click(function(e) {
-		if ($(window).height() <= 640)
+		if ($(window).width() <= 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
@@ -140,14 +140,14 @@ $(document).ready(function(){
 
 	//toggle the display of child links when a parent is clicked
 	$(".sidebar .block-menu .parentlink > a").click(function() {
-		if ($(window).height() > 640)
+		if ($(window).width() > 640)
 		{
 			$(this).siblings("ul").slideToggle('slow');
 		}
 	});
 	
 	$("#content-header .block-menu > .content > .menu > li").mouseover(function() {
-		if ($(window).height() > 640)
+		if ($(window).width() > 640)
 		{
 			$(this).addClass("active");
 		}
@@ -174,7 +174,7 @@ $(document).ready(function(){
 		Check the window size when it's re-sized to see if we need to hide/show the menu
 	*/
 	$(window).resize(function() {
-		if ($(window).height() > 640)	//minimum window width for desktop layout
+		if ($(window).width() > 640)	//minimum window width for desktop layout
 		{
 			$(".block-menu .menu:first-child").css("display", "block");
 			$('#block-menu-menu-secondary-navigation .menu:first-child').css("display", "block");
@@ -208,7 +208,7 @@ $(document).ready(function(){
     /*
     When the main nav menu is in the sidebar, expand the nested menus as appropriate to show the current page's link
      */
-    if ($(window).height() > 640 ) {
+    if ($(window).width() > 640 ) {
         $(".sidebar #block-system-main-menu .menu li a.active").parents("ul").css("display", "block");
     }
 
