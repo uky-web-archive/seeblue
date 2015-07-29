@@ -321,7 +321,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
             <div class="copyright cf">
             <?php $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); ?>
 
-            <a class="foot-logo alignleft" href="#" title="KENTUCKY">
+            <a class="foot-logo alignleft" href="http://www.uky.edu" title="KENTUCKY">
               <img src="<?php print $apath; ?>/img/foot-logo1.png" alt="University of Kentucky">
             </a>
 
@@ -331,7 +331,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="http://www.uky.edu/Provost/strategic_planning/mission.htm" title="Mission statement">Mission Statement</a> 
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="http://www.uky.edu/Provost/strategic_planning/mission.htm" title="Mission statement">Mission Statement</a>
 
             </div>
 
