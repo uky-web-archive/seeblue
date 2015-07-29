@@ -11,7 +11,7 @@ version:   1.0
 /* =CSS Reset
 --------------------------------------------------------------------------------------------------*/
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -19,7 +19,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;	padding: 0; border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
@@ -38,7 +38,7 @@ table {	border-collapse: collapse; border-spacing: 0;}
 --------------------------------------------------------------------------------------------------*/
 
 /* Micro Clearfix Hack by Nicholas Gallagher (http://nicolasgallagher.com/micro-clearfix-hack/) */
-/* For modern browsers */ 
+/* For modern browsers */
 .cf:before, .cf:after { content:""; display:table; }
 .cf:after { clear:both; }
 /* For IE 6/7 (trigger hasLayout) */
@@ -194,6 +194,7 @@ h1.page-header,
 --------------------------------------------------------------------------------------------------*/
 .field-name-field-header-image img {
 	width: 100%;
+	height:auto;
 }
 .field-name-body img {
 	border: 1px solid #CCC;
@@ -833,10 +834,10 @@ fieldset { border: none; margin: 0; padding: 0; }
 
 
 /* Large desktop */
-@media (min-width: 971px) { 
+@media (min-width: 971px) {
 	.wrap-inner{width:970px;}
 }
- 
+
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 970px) {
 	.wrap-inner, .section {width:94%;}
@@ -845,7 +846,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.front #header-inner .wrap-inner {padding-top: 12px;min-height: 116px;}
 	.sidebar-searchform label{width:70%;}
 }
-@media (max-width: 800px) { 
+@media (max-width: 800px) {
 	.sidebar-searchform label{width:70%;}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
@@ -892,7 +893,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	/*.top-link, .front .head-right, .front .head-uk, .newsblock, .additional-info, .sidebar-search{display:none;}*/
     .top-link, .front .head-right, .front .head-uk, .additional-info {display:none;}
 	#sidebar-right {display: none;}
-	
+
 	.front #header-inner .wrap-inner{padding:0;}
 	.wrap-top {background: url(../img/bgi/wrap-topiphone-bg.png) repeat-x left top; min-height: 82px; position: relative; z-index: 1000;}
 	.menulink{display:block; width:87px; height:60px; padding:0 2px 0 10px; text-align:center; line-height:60px; text-decoration:none; font-weight:bold; font-size:24px; color:#ffffff; margin-top:11px;position:relative;}
@@ -910,14 +911,14 @@ fieldset { border: none; margin: 0; padding: 0; }
 	#main-wrapper #sidebar-first, #main-wrapper #sidebar-second, #main-wrapper #interior-logo { width: 100%;}
 
 
-	
-	
+
+
 	.mobile-menu {display: block; font-family: 'HelveticaNeue-Roman';}
-	
+
 	.mobile-menu ul.menu {/*display: none;*/ border: none;}
 	.mobile-menu ul.menu:first-child {margin-top: 0; padding: 0;}
 	.mobile-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
-	
+
 	.mobile-menu ul.menu li {width: 100%; display: block; background: url(../img/bgi/menu_top_level.png) top left repeat-x; margin: 0; padding: 0; }
 	#main-wrapper .region #block-menu-menu-secondary-navigation ul.menu li {background: url(../img/bgi/menu_secondary.png) top left repeat-x; border-bottom: 1px solid #88a5c9;}
 	#main-wrapper .region #block-menu-menu-secondary-navigation {border: 1px solid #004da8; border-width: 1px 0 1px 0;}
@@ -926,13 +927,13 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.mobile-menu ul.menu li li:hover {background: url(../img/bgi/menu_second_level.png) top left repeat-x;}
 	.mobile-menu ul.menu li li li {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
 	.mobile-menu ul.menu li li li:hover {background: url(../img/bgi/menu_nth_level.png) top left repeat-x;}
-	
+
 	.mobile-menu ul.menu li a {width: 96%; text-align: left; font-size: 18px; padding: 10px 2%; text-shadow: none; border: none; height: 30px; overflow: hidden; background: transparent url(../img/bgi/sprites.png) right -356px no-repeat; color: #FFF; display: block;}
 	.mobile-menu ul.menu li a:hover {background: transparent url(../img/bgi/sprites.png) right -356px no-repeat; text-shadow: none; text-decoration: none;}
 	.mobile-menu ul.menu li.parentlink > a {background: transparent url(../img/bgi/sprites.png) right -530px no-repeat;}
 	.mobile-menu ul.menu li.parentlink > a:hover {background: transparent url(../img/bgi/sprites.png) right -530px no-repeat;}
-	
-	
+
+
 	#mobile-interior-logo {display: block; padding: 20px 0; width: 100%;}
     #mobile-interior-logo img {padding: 0 10%; width: 80%;}
     #interior-logo {display: none;}
@@ -941,7 +942,7 @@ fieldset { border: none; margin: 0; padding: 0; }
     .searchform {display: none; width: 200px; margin: 15px 15px 0 0;}
     .searchform label {width: 100%;}
     .searchform input {height: 2em; width: 90%; padding: 0 5%; font-size: 24px;}
-	
+
 	.topRightLink {padding-top: 22px; padding-left:0%; width:70%; text-align:right; display: none;}
 	.topRightLink li{float:none; display:inline;}
 	.topRightLink li a{font-size:20px; line-height:30px; display:inline-block;}
@@ -989,9 +990,9 @@ fieldset { border: none; margin: 0; padding: 0; }
 	 .foot-logo.seeblue {width: 24%; border: 0;}
 	.foot-logo img {width: 100%; height: auto;}
 }
- 
+
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
 
 	#main-wrapper .region #block-system-main-menu {position: fixed; top: 0px; left: 0px; width: 100%;}
 	#main-wrapper .region .block-menu ul.menu:first-child {margin-top: 0px;}
@@ -1003,10 +1004,10 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.topRightLink li a{font-size: 14px;}
 	.block-menu .menu:first-child {top:61px;}
 	#menu-front {width: 100%; top: -20px; position: absolute; display: block;}
-	
+
 	#main-wrapper .region .block-menu ul.menu {display: none; position: absolute; top: 62px; left: 0px; border: none;}
 	#main-wrapper .region .block-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
-	
+
 	#main-wrapper .region .block-menu ul.menu li a {font-size: 22px;}
 
 
@@ -1057,7 +1058,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.topRightLink li a{font-size:14px;}
 	.pdflisting li {font-size: 13px; line-height: 26px;}
 	.block-menu .menu:first-child {top:45px;}
-	
+
 
 	#main-wrapper .region .block-menu ul.menu {display: none; position: absolute; top: 45px; left: 0px; border: none;}
 	#main-wrapper .region .block-menu ul.menu ul.menu {position: relative; top: 0px; padding: 0; width: 100%;}
@@ -1089,7 +1090,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	height:29px;
 	width:29px;
 	cursor:pointer;
-	text-indent:-999em; 
+	text-indent:-999em;
 }
 .social-icon a.myspace {
 	background:url("../img/sbsprite.png") no-repeat 0 0 transparent;
@@ -1281,4 +1282,3 @@ fieldset { border: none; margin: 0; padding: 0; }
 .sidebar .social-icon a.twitter:hover {
     background-position: -406px -29px;
 }
-
