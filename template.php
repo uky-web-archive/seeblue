@@ -7,19 +7,23 @@
 // print_r(debug_backtrace());
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-if ( is_null( theme_get_setting( 'site_description' ) ) )
+$theme_key = 'seeblue201409';
+if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
 {
-  global $theme_key;
+
+  //global $theme_key;
   /*
   * The default values for the theme variables. Make sure $defaults exactly
   * matches the $defaults in the theme-settings.php file.
   */
+
+
   $defaults = array(             // <-- change this array
-    'background_logo_path'	=> drupal_get_path('theme',$GLOBALS['theme']) . theme_get_setting('background_logo_path'),
+    'background_logo_path'  => drupal_get_path('theme', $theme_key) . theme_get_setting('background_logo_path', $theme_key),
     'site_description' => " ",
-    'front_logo' => seeblue201409_save_file( theme_get_setting("front_logo")),
-    'interior_logo' => seeblue201409_save_file(theme_get_setting("interior_logo"))
+    'front_logo' => seeblue201409_save_file( drupal_get_path('theme', $theme_key) . theme_get_setting("front_logo", $theme_key)),
+    'interior_logo' => seeblue201409_save_file(drupal_get_path('theme', $theme_key) . theme_get_setting("interior_logo", $theme_key)),
+    'theme_initialized' => true
   );
 
 
@@ -49,7 +53,7 @@ if ( is_null( theme_get_setting( 'site_description' ) ) )
   drupal_static_reset('theme_get_setting');
 
 
-} 
+}
 
 /**
  *
@@ -128,7 +132,7 @@ function seeblue201409_form_alter(&$form, &$form_state, $form_id)
   {
     //add a placeholder for the search form text field (not included by default)
 	$form['search_block_form']['#attributes']['placeholder'] = theme_get_setting('search_placeholder');//"Search this site";
-	
+
 	//change the submit field to use an image rather than a button
 	$form['actions']['submit'] = array('#type' => 'image_button', '#src' => base_path() . path_to_theme() . '/img/search-iconbg.png');
   }
