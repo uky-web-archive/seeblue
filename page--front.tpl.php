@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
  * @file
  *
@@ -83,7 +83,7 @@
  * @see html.tpl.php
  */
 
-$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); 
+$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL));
 
 //flag for whether we print horizontal or vertical menu
 $is_horizontal = theme_get_setting('use_horizontal_menu');
@@ -106,14 +106,14 @@ $menu = menu_navigation_links('main-menu');
 </div>
 
 <div id="page-wrapper">
-  
+
   <div id="page">
 
     <!-- start header -->
     <?php include('header.inc'); ?>
 
     <?php print render($page['header']); ?>
-    <!-- end header --> 
+    <!-- end header -->
 
     <!-- start content -->
     <div id="main-wrapper">
@@ -121,26 +121,26 @@ $menu = menu_navigation_links('main-menu');
 	  <?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
       <div id="content-header">
-      
+
 		    <?php if ($is_horizontal == 1): ?>
-        
+
           <div class="region">
-          
+
           <div class="block-menu" id="block-system-main-menu">
-          
+
             <div class="content">
-        
+
             <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu'));
              print drupal_render($tree_output); ?>
-              
+
             </div>
-          
+
           </div>
-          
+
           </div>
-        
+
         <?php endif; ?>
-      
+
         <?php print render($page['content_header']); ?>
 
       </div>
@@ -206,7 +206,7 @@ $menu = menu_navigation_links('main-menu');
         <!-- end first sidebar -->
       <?php endif; ?>
 
-     
+
 
       <?php if ($page['sidebar_second']): ?>
       <!-- start second sidebar -->
@@ -228,7 +228,7 @@ $menu = menu_navigation_links('main-menu');
     <!-- end content -->
 
 
-    <!-- start footer --> 
+    <!-- start footer -->
     <footer id="footer-wrapper">
 
       <div class="section">
@@ -260,7 +260,7 @@ $menu = menu_navigation_links('main-menu');
           <div class="footer-bottom cf">
 
             <?php if ($page['footer']): ?>
-            
+
               <div class="alignleft">
 
                 <?php print render($page['footer']); ?>
@@ -270,7 +270,7 @@ $menu = menu_navigation_links('main-menu');
             <?php endif; ?>
 
             <?php if ($page['footer_social_media']): ?>
-            
+
               <div class="alignright">
 
                 <?php print render($page['footer_social_media']); ?>
@@ -294,7 +294,7 @@ $menu = menu_navigation_links('main-menu');
 
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="http://www.uky.edu/Provost/strategic_planning/mission.htm" title="Mission statement">Mission Statement</a> 
 
 
             </div>
@@ -311,7 +311,7 @@ $menu = menu_navigation_links('main-menu');
 
       </div>
 
-    </footer> 
+    </footer>
     <!-- end footer -->
 
   </div>

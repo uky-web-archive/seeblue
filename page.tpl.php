@@ -87,7 +87,7 @@
   * Boolean toggle for whether or not we should print the right sidebar. If either left sidebar is output, we'll ignore the right sidebar.
   */
 
-$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL)); 
+$apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL));
 
   $is_sidebar = FALSE;
   if ($page['sidebar_first'] || $page['sidebar_second'])
@@ -191,7 +191,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
                 <?php endif; ?>
               <?php print render($title_suffix); ?>
 
-            
+
 
               <?php print render($page['content']); ?>
 
@@ -242,7 +242,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
         <?php endif; ?>
 
-       
+
 
         <?php if ($page['sidebar_second']): ?>
         <!-- start second sidebar -->
@@ -331,7 +331,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
             <div class="copytext alignright">
 
-              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="#" title="Mission statement">Mission Statement</a> 
+              &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="http://www.uky.edu/Provost/strategic_planning/mission.htm" title="Mission statement">Mission Statement</a> 
 
             </div>
 
