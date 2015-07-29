@@ -13,7 +13,6 @@ stylesheets[all][] = css/responsiveslides.css
 stylesheets[all][] = css/featurebox.css
 
 ;js
-;scripts[] = js/jquery.js
 scripts[] = js/jquery.flexslider.js
 scripts[] = js/css3-mediaqueries.js
 scripts[] = js/custom.js
@@ -56,5 +55,3 @@ settings[search_placeholder] = Search this site
 settings[site_font_size] = 14
 settings[header_menu_font_size] = 14
 settings[sidebar_menu_font_size] = 16
-
-
