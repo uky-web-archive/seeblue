@@ -32,7 +32,6 @@ regions[homepage_content] = Homepage Content
 regions[content] = Content
 regions[sidebar_first] = Sidebar First
 regions[sidebar_second] = Sidebar Second
-regions[sidebar_right] = Sidebar Right
 regions[footer_first_column] = Footer First Column
 regions[footer_second_column] = Footer Second Column
 regions[footer_third_column] = Footer Third Column

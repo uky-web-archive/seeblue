@@ -119,8 +119,18 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
     <div id="page">
 
+      <!-- determine layout type -->
+      <?php
+
+        $layout = "single-column";
+        if (!empty($page['sidebar_first']) || !empty($page['sidebar_second'])){
+          $layout = "two-column";
+        }
+
+      ?>
+
       <!-- start content -->
-      <div id="main-wrapper">
+      <div id="main-wrapper" class="<?php echo $layout; ?>">
 
       <?php if ($page['content_header'] || $is_horizontal == 1): ?>
 
@@ -165,100 +175,62 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
         <div id="main" class="wrap-inner cf">
 
-          <?php if ($page['sidebar_right'] && $is_sidebar == FALSE): ?>
-          <!-- start right sidebar -->
+          <div class="sidebar sidebar-left">
+            <div  id="interior-logo">
+              <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
+            </div>
+            <?php if ($is_horizontal == 0): ?>
 
-          <div id="sidebar-right">
+             <nav id="main-menu" class="main-nav" role="navigation">
 
-            <?php print render($page['sidebar_right']); ?>
+               <div class="region">
+
+                 <div class="block-menu" id="block-system-main-menu">
+
+                   <div class="content">
+
+                       <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu')); ?>
+                       <?php print drupal_render($tree_output); ?>
+
+                   </div>
+
+                 </div>
+
+               </div>
+
+             </nav>
+           <?php endif; ?>
+
+
 
           </div>
 
-          <!-- end right sidebar -->
-          <?php endif; ?>
-
-          <section id="content" class="widecolumn alignright">
+          <main role="main" id="content" class="widecolumn alignright">
 
             <div class="content-list cf">
 
               <div class="block site-messages"><?php print $messages;?></div>
                 <?php print render($tabs); ?>
-              <?php print render($title_prefix); ?>
-                <?php if ($title): ?>
-                  <h1 class="title page-header" id="page-title">
-                    <?php print $title; ?>
-                  </h1>
-                <?php endif; ?>
-              <?php print render($title_suffix); ?>
-
+              <header>
+                <?php print render($title_prefix); ?>
+                  <?php if ($title): ?>
+                    <h1 class="title page-header" id="page-title" role="heading">
+                      <?php print $title; ?>
+                    </h1>
+                  <?php endif; ?>
+                <?php print render($title_suffix); ?>
+              </header>
 
 
               <?php print render($page['content']); ?>
 
             </div>
+          </main>
 
-          </section>
-
-
-        <div class="sidebar alignleft" id="interior-logo">
-
-          <a href="<?php echo $front_page; ?>"><img src="<?php echo $o; ?>" alt="<?php echo $site_name; ?>" class="logo-interior"/></a>
-
-        </div>
-
-         <?php if ($is_horizontal == 0): ?>
-
-          <nav id="main-menu" class="main-nav alignleft sidebar">
-
-            <div class="region">
-
-              <div class="block-menu" id="block-system-main-menu">
-
-                <div class="content">
-
-                    <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu')); ?>
-                    <?php print drupal_render($tree_output); ?>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </nav>
-
-        <?php endif; ?>
-
-        <?php if ($page['sidebar_first']): ?>
-          <!-- start first sidebar -->
-          <aside id="sidebar-first" class="sidebar alignleft">
-
+          <aside role="complementary" class="sidebar sidebar-pull-left">
             <?php print render($page['sidebar_first']); ?>
-
-            <?php $is_sidebar = TRUE; ?>
-
-          <!-- end first sidebar -->
+            <?php print render($page['sidebar_second']); ?>
           </aside>
-
-        <?php endif; ?>
-
-
-
-        <?php if ($page['sidebar_second']): ?>
-        <!-- start second sidebar -->
-          <aside id="sidebar-second" class="sidebar alignleft">
-
-            <div class="newsblock cf">
-
-             <?php print render($page['sidebar_second']); ?>
-
-            </div>
-
-          </aside>
-        <!-- end second sidebar -->
-        <?php $is_sidebar = TRUE; ?>
-
-        <?php endif; ?>
 
         </div>
 

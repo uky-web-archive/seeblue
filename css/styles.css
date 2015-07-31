@@ -270,7 +270,8 @@ html, body, #page{height:100%;}
 .head-right .content p {display: table-cell; vertical-align: middle;}
 #main-wrapper {padding:0px 0 30px; background:white; }
 #content {width:68%; padding:0;}
-#sidebar-first, #sidebar-second, #main-menu, #interior-logo {width:32%; padding-top: 20px; clear:left;}
+#sidebar-first, #sidebar-second, #main-menu { padding-top: 20px; clear:left;}
+#interior-logo {padding-top: 20px;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
 .front #content .block {width: 97%; padding-left: 3%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
@@ -836,6 +837,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 /* Large desktop */
 @media (min-width: 971px) {
 	.wrap-inner{width:970px;}
+	.sidebar-left {width:32%; float:left}
 }
 
 /* Portrait tablet to landscape and desktop */
@@ -845,9 +847,11 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.head-right p{ font-size:14px; line-height:18px;}
 	.front #header-inner .wrap-inner {padding-top: 12px;min-height: 116px;}
 	.sidebar-searchform label{width:70%;}
+		.sidebar-left {width:32%; float:left}
 }
 @media (max-width: 800px) {
 	.sidebar-searchform label{width:70%;}
+		.sidebar-left {width:32%; float:left}
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
 	html {	-webkit-text-size-adjust: none; }
@@ -1281,4 +1285,11 @@ fieldset { border: none; margin: 0; padding: 0; }
 }
 .sidebar .social-icon a.twitter:hover {
     background-position: -406px -29px;
+}
+
+
+/* Sidebar pull left */
+.sidebar-pull-left {
+	position:relative;
+	width:32%;
 }
