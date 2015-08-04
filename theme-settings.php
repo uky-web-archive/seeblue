@@ -10,11 +10,15 @@
  *  @author Miles Briggs
  *
  */
-function seeblue201409_form_system_theme_settings_alter(&$form, $form_state)
+function seeblue201409_form_system_theme_settings_alter(&$form, &$form_state)
 {
-	
-  
- // The "appearance" dialog is not necessarily called from this theme, so path_to_theme does not work.  
+
+	// Work-around for this bug: https://drupal.org/node/1862892
+$theme_settings_path = drupal_get_path('theme', 'seeblue201409') . '/theme-settings.php';
+if (file_exists($theme_settings_path) && !in_array($theme_settings_path, $form_state['build_info']['files'])) {
+	$form_state['build_info']['files'][] = $theme_settings_path;
+}
+ // The "appearance" dialog is not necessarily called from this theme, so path_to_theme does not work.
  $theme_path = drupal_get_path('theme', variable_get('theme_default', NULL));
 
  // Get the base-est theme file path rather than the subtheme
@@ -25,10 +29,10 @@ function seeblue201409_form_system_theme_settings_alter(&$form, $form_state)
  }
 
 
-$file_path = $GLOBALS['base_path'] . $theme_path; 
-  
+$file_path = $GLOBALS['base_path'] . $theme_path;
+
   unset($form['theme_settings']);
-	
+
 	//change the title and description of the existing logo field
 	$form['logo']['#title'] = t('Header settings');
 	$form['logo']['#description'] = t('Use these fields to customize the header of your theme.');
@@ -64,7 +68,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 
 	//go ahead and generate the path for the default background logo as specified in seeblue.info
 	$logo_path = theme_get_setting('background_logo_path');
-    
+
     if (file_uri_scheme($logo_path) == 'public')
     {
     	$logo_path = file_uri_target($logo_path);
@@ -77,7 +81,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 			'#value'			=> theme_get_setting('background_logo_path')
 	);
 
-  
+
   $form['logo']['background_logo_select'] = array(
       '#type'        => 'select',
       '#title'      => t('Header Background'),
@@ -90,7 +94,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
       ),
       '#default_value'  => theme_get_setting('background_logo_select')
   );
-  
+
     $form['logo']['front_logo'] = array(
         '#type' 				=> 'managed_file',
         '#title'				=> t('Logo to use on homepage'),
@@ -127,7 +131,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
         ),
 
     );
-	
+
 	$form['logo']['interior_logo_alt'] = array(
 		'#type'					=> 'textfield',
 		'#title'				=> t('Alt text to use for logo'),
@@ -136,14 +140,14 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 		'#size'					=> 60,
 		'#maxlength'			=> 256
 	);
-  
-  
+
+
   $form['logo']['use_horizontal_menu'] = array(
       '#type'        => 'checkbox',
       '#title'      => t("Use horizontal menu"),
       '#default_value'  => '0'
   );
-  
+
   $form['logo']['use_horizontal_menu'] = array(
       '#type'        => 'select',
       '#title'      => t('Use Horizontal Menu'),
@@ -153,10 +157,10 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
       ),
       '#default_value'  => theme_get_setting('use_horizontal_menu')
   );
-  
-  
-  
-  
+
+
+
+
   //create a text field to store the search form placeholder text
   $form['search_settings']['search_placeholder'] = array(
       '#type'        => 'textfield',
@@ -167,9 +171,9 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
       '#required'     => FALSE,
       '#description'    => t('Placeholder in text field of search form.'),
   );
-  
-  
-  
+
+
+
   $form['typo_settings']['header_menu_font_size'] = array(
       '#type' => 'select',
       '#title' => t('Header Menu Font Size'),
@@ -187,13 +191,13 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
     '19' => t('19'),
     '20' => t('20'),
     '21' => t('21'),
-    '22' => t('22'),  
-    '23' => t('23'),  
-    '24' => t('24'),  
+    '22' => t('22'),
+    '23' => t('23'),
+    '24' => t('24'),
     ),
   );
-  
-  
+
+
   $form['typo_settings']['sidebar_menu_font_size'] = array(
       '#type' => 'select',
       '#title' => t('Sidebar Menu Font Size'),
@@ -211,13 +215,13 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
     '19' => t('19'),
     '20' => t('20'),
     '21' => t('21'),
-    '22' => t('22'),  
-    '23' => t('23'),  
-    '24' => t('24'),  
+    '22' => t('22'),
+    '23' => t('23'),
+    '24' => t('24'),
     ),
   );
-  
-  
+
+
   $form['theme_settings_tab']['typo_settings']['site_font_size'] = array(
     '#type' => 'select',
     '#title' => t('Sitewide text\'s font size'),
@@ -240,7 +244,7 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
 
 
   //add a submit handler for the theme settings form
-  $form['#submit'][] = 'seeblue201409_settings_submit';
+  $form['#submit'][] = 'seeblue201409_form_system_theme_settings_submit';
 
 }
 
@@ -255,11 +259,10 @@ $file_path = $GLOBALS['base_path'] . $theme_path;
  *
  *  @author Miles Briggs
  */
-function seeblue201409_settings_submit($form, &$form_state)
+function seeblue201409_form_system_theme_settings_submit($form, &$form_state)
 {
-	
+	$form_state['values']['theme_initialized'] = 1;
 	$form_state['values']['background_logo_path'] = $form_state['values']['background_logo_select'];
-
 
     if ($form_state['values']['interior_logo'] != 0)
     {
@@ -268,7 +271,7 @@ function seeblue201409_settings_submit($form, &$form_state)
         file_save($f);
 		    file_usage_add($f, 'user', 'user', 0);
     }
-	
+
 	if ($form_state['values']['front_logo'] != 0)
 	{
         $f = file_load($form_state['values']['front_logo']);
@@ -276,8 +279,5 @@ function seeblue201409_settings_submit($form, &$form_state)
         file_save($f);
 		    file_usage_add($f, 'user', 'user', 0);
 	}
-  
+
 }
-
-
-

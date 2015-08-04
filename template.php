@@ -4,19 +4,14 @@
 * Initialize theme settings
 */
 
-// print_r(debug_backtrace());
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 $theme_key = 'seeblue201409';
 if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
 {
-
   //global $theme_key;
   /*
   * The default values for the theme variables. Make sure $defaults exactly
   * matches the $defaults in the theme-settings.php file.
   */
-
 
   $defaults = array(             // <-- change this array
     'background_logo_path'  => drupal_get_path('theme', $theme_key) . theme_get_setting('background_logo_path', $theme_key),
@@ -26,14 +21,13 @@ if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
     'theme_initialized' => true
   );
 
-
   // Get default theme settings.
   $settings = variable_get(str_replace('/', '_', 'theme_'. $theme_key .'_settings'), array());
 
   // Don't save the toggle_node_info_ variables.
   if (module_exists('node'))
   {
-    // NOTE: node_get_types() is renamed to node_type_get_types() in Drupal 7
+    //NOTE: node_get_types() is renamed to node_type_get_types() in Drupal 7
     foreach (node_type_get_types() as $type => $name)
     {
       unset($settings['toggle_node_info_' . $type]);
@@ -145,20 +139,18 @@ function seeblue201409_form_alter(&$form, &$form_state, $form_id)
 */
 function seeblue201409_save_file($uri)
 {
-global $user;
-$uri = drupal_get_path('theme',$GLOBALS['theme']) . $uri;
-$filename = end((explode('/', $uri)));
+  global $user;
+  $uri = drupal_get_path('theme',$GLOBALS['theme']) . $uri;
+  $filename = end((explode('/', $uri)));
 
-$file = new stdClass;
-$file->uid = $user->uid;
-$file->filename = $filename;
-$file->uri = $uri;
-$file->filemime = file_get_mimetype($uri);
-$file->filesize = filesize($uri);
-$file->status = 1;
-file_save($file);
-
-file_usage_add($file, $GLOBALS['theme'], 'user', '1');
-
-return $file->fid;
+  $file = new stdClass;
+  $file->uid = $user->uid;
+  $file->filename = $filename;
+  $file->uri = $uri;
+  $file->filemime = file_get_mimetype($uri);
+  $file->filesize = filesize($uri);
+  $file->status = 1;
+  file_save($file);
+  file_usage_add($file, $GLOBALS['theme'], 'user', '1');
+  return $file->fid;
 }
