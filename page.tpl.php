@@ -103,13 +103,13 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
 
   ?>
 
-  <div class="wrap-top">
+  <div class="wrap-top" role="menubar">
 
     <?php include_once("global_header.inc"); ?>
 
   </div>
 
-  <div class="mobile-menu">
+  <div class="mobile-menu"  role="navigation">
     <?php $main_menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
     <?php print drupal_render($main_menu); ?>
 
@@ -301,7 +301,7 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
               <img src="<?php print $apath; ?>/img/seeblue.png" alt="see blue.">
             </a>
 
-            <div class="copytext alignright">
+            <div role="contentinfo" class="copytext alignright">
 
               &copy; University of Kentucky | Lexington, Kentucky 40506 | (859) 257-9000 <br/> An Equal Opportunity University | <a href="http://www.uky.edu/Provost/strategic_planning/mission.htm" title="Mission statement">Mission Statement</a>
 

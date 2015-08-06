@@ -2,21 +2,21 @@
 
 
   $drupalpath = path_to_theme();
-  
-	try { 
+
+	try {
 		$data = json_decode(file_get_contents($drupalpath . "/top_nav.json"));
-		
+
 		if(!$data || !$data->global_links || !$data->meta_links) {
 			$data = json_decode('{ "global_links" : [], "meta_links" : [] }');
-			throw new Exception('JSON did not contain both global and meta links arrays. check top_nav.json file.'); 
+			throw new Exception('JSON did not contain both global and meta links arrays. check top_nav.json file.');
 		}
 	}
 	catch (Exception $e) {
-		$data = json_decode('{ "global_links" : [], "meta_links" : [] }'); 
+		$data = json_decode('{ "global_links" : [], "meta_links" : [] }');
 
-		drupal_set_message("A problem was detected with the top navigation json file. Please check top_nav.json at the root of this theme that it exists and it is a valid JSON format.",'error'); 
+		drupal_set_message("A problem was detected with the top navigation json file. Please check top_nav.json at the root of this theme that it exists and it is a valid JSON format.",'error');
 	}
-	
+
 ?>
 <style type="text/css">
 
@@ -34,7 +34,7 @@
 
 </style>
 <div class="wrap-inner cf"> <a class="menulink alignleft" href="javascript:void(0);" title="Menu"><span>Menu</span><img src="<?php echo $apath; ?>/img/menulink-bg.png" alt="Menu" title="Menu" /></a>
-  <ul class="topRightLink alignleft">
+  <ul role="navigation" aria-label="university links" class="topRightLink alignleft">
     <?php
 
       foreach ($data->global_links as $l)
@@ -50,16 +50,16 @@
 
   <a href="javascript:void(0);" id="mobile-search-toggle"></a>
 
-  <form class="searchform alignright" action="http://ukcc.uky.edu/cse/">
+  <form role="search" class="searchform alignright" action="http://ukcc.uky.edu/cse/">
     <fieldset>
       <label class="alignleft">
-        <input type="text" placeholder="search uky.edu" name="q"/>
+        <input type="search" placeholder="search uky.edu" name="q"/>
       </label>
       <button class="alignleft" type="submit" id="global-search">Search</button>
     </fieldset>
   </form>
 
-  <ul class="top-link alignright">
+  <ul role="navigation" aria-label="university resources" class="top-link alignright">
     <?php
       foreach ($data->meta_links as $l)
       {

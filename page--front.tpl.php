@@ -85,6 +85,12 @@
 
 $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', NULL));
 
+$is_sidebar = FALSE;
+if ($page['sidebar_first'] || $page['sidebar_second'])
+{
+  $is_sidebar = TRUE;
+}
+
 //flag for whether we print horizontal or vertical menu
 $is_horizontal = theme_get_setting('use_horizontal_menu');
 
@@ -92,13 +98,13 @@ $menu = menu_navigation_links('main-menu');
 
 ?>
 
-<div class="wrap-top">
+<div class="wrap-top" role="menubar">
 
   <?php include_once("global_header.inc"); ?>
 
 </div>
 
-<div class="mobile-menu">
+<div class="mobile-menu" role="navigation">
 
   <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu')); ?>
   <?php print drupal_render($tree_output); ?>
@@ -115,6 +121,8 @@ $menu = menu_navigation_links('main-menu');
     <?php print render($page['header']); ?>
     <!-- end header -->
 
+
+
     <!-- start content -->
     <div id="main-wrapper">
 
@@ -123,7 +131,7 @@ $menu = menu_navigation_links('main-menu');
       <div id="content-header">
 
 		    <?php if ($is_horizontal == 1): ?>
-
+        <nav id="main-menu" class="main-nav" role="navigation">
           <div class="region">
 
           <div class="block-menu" id="block-system-main-menu">
@@ -138,7 +146,7 @@ $menu = menu_navigation_links('main-menu');
           </div>
 
           </div>
-
+        </nav>
         <?php endif; ?>
 
         <?php print render($page['content_header']); ?>
@@ -173,54 +181,35 @@ $menu = menu_navigation_links('main-menu');
 
       </section>
 
-       <?php if ($is_horizontal == 0): ?>
 
-        <nav id="main-menu" class="main-nav alignleft sidebar">
+        <?php if ($is_horizontal == 0): ?>
+          <div class="sidebar sidebar-left">
+         <nav id="main-menu" class="main-nav" role="navigation">
 
-          <div class="region">
+           <div class="region">
 
-            <div class="block-menu" id="block-system-main-menu">
+             <div class="block-menu" id="block-system-main-menu">
 
-              <div class="content">
+               <div class="content">
 
-             <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu'));
-             print drupal_render($tree_output); ?>
+                   <?php $tree_output = menu_tree_output(menu_tree_page_data('main-menu')); ?>
+                   <?php print drupal_render($tree_output); ?>
 
-              </div>
+               </div>
 
-            </div>
+             </div>
 
-          </div>
+           </div>
 
-        </nav>
-
-      <?php endif; ?>
-
-      <?php if ($page['sidebar_first']): ?>
-        <!-- start first sidebar -->
-        <aside id="sidebar-first" class="sidebar alignleft">
-
-          <?php print render($page['sidebar_first']); ?>
-
-        </aside>
-        <!-- end first sidebar -->
-      <?php endif; ?>
+         </nav>
+               </div>
+       <?php endif; ?>
 
 
-
-      <?php if ($page['sidebar_second']): ?>
-      <!-- start second sidebar -->
-      <aside id="sidebar-second" class="sidebar alignleft">
-
-        <div class="newsblock cf">
-
-          <?php print render($page['sidebar_second']); ?>
-
-        </div>
-
+      <aside role="complementary" class="sidebar sidebar-pull-left">
+        <?php print render($page['sidebar_first']); ?>
+        <?php print render($page['sidebar_second']); ?>
       </aside>
-      <!-- end second sidebar -->
-      <?php endif; ?>
 
       </div>
 

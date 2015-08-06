@@ -273,7 +273,7 @@ html, body, #page{height:100%;}
 #sidebar-first, #sidebar-second, #main-menu { padding-top: 20px; clear:left;}
 #interior-logo {padding-top: 20px;}
 .front #content {padding: 20px 0 0 0; width: 68%;}
-.front #content .block {width: 97%; padding-left: 3%; float: left;}
+.front #content .block {width: 97%; float: left;}
 #content-header {display: table; width: 100%; height: auto; background: #678fc0;}
 #content {width:64.8%; padding:20px 1.2% 0 2%; padding-bottom: 6px; }
 .wrap-top{background:url(../img/bgi/wrap-topbg.png) repeat-x left top ; height:45px; }
@@ -786,9 +786,12 @@ em, i {font-style: italic;}
 .region-footer-first-column{width:32%; padding-left:0; float: left;}
 .region-footer-second-column{width:32%; padding-left:2.3%; float: left;}
 .region-footer-third-column{width:31%; padding-left:2.2%; float: left;}
+
 .footer-top ul li{float:left; width:100%; list-style: none;}
 .footer-top ul li a{padding-left:10px; display:block; font-size:14px; line-height:23px; color:#89b3e4; text-decoration:none; border-bottom:1px solid #004da8; }
 .footer-top ul li:hover a, .footer-top ul li:focus a, .footer-top ul li:hover a, .footer-top ul li.active a{color:#fff; border-bottom:1px solid #1a5aa6; background:url(../img/bgi/sprites.png) no-repeat right 8px #1b5faf;}
+.footer-top h2, p {color:#ffffff}
+
 .footer-bottom {margin:0 12px; border-top:1px solid #125bb0; border-bottom:1px solid #125bb0; padding:14px 0px 4px 18px;}
 .region-footer p, .region-footer p a {font-size:14px; line-height:18px; color:#89b3e4; padding:0 0 10px;}
 
@@ -833,12 +836,15 @@ fieldset { border: none; margin: 0; padding: 0; }
 /* End Webform
 --------------------------------------------------------------------------------------------------*/
 
-
+.sidebar-left {width:32%; float:left}
+.sidebar-pull-left {position:relative;width:32%;   padding: 20px 0 0 0;}
 /* Large desktop */
 @media (min-width: 971px) {
 	.wrap-inner{width:970px;}
-	.sidebar-left {width:32%; float:left}
+
 }
+
+
 
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 970px) {
@@ -852,8 +858,10 @@ fieldset { border: none; margin: 0; padding: 0; }
 @media (max-width: 800px) {
 	.sidebar-searchform label{width:70%;}
 		.sidebar-left {width:32%; float:left}
+
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+
 	html {	-webkit-text-size-adjust: none; }
 	.searchform input{width:97px; height:14px;}
 	.figure-heading{font-size: 18px; line-height:24px;}
@@ -863,7 +871,6 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.additional-info .angela-profile p {font-size: 12px;}
 	.pdfforms-links{width:46%;}
 	.pdfforms-col2{padding-left: 8%;}
-
 }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation : portrait){
 	.front #header-inner .wrap-inner{padding-top:15px; min-height:100px;}
@@ -882,12 +889,13 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.head-right p{ font-size:10px; line-height:14px;}
 	.front #header-inner .wrap-inner {padding-top: 14px; min-height: 94px;}
 	.sidebar-searchform label{width:70%;}
+	.top-link {display:none;}
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 640px) {
 
 
-
+.footer-top .region {width:100%; padding: 20px 0 0 0;}
     .view-contentlist .item-list ul li {width: 100%; margin: 0 !important;}
 
 	#main-wrapper .region #block-system-main-menu {position: fixed; top: 82px; left: 0px; width: 100%;}
@@ -907,7 +915,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	#content-header {position: absolute; top: 0px; z-index: 999;}
 	.block-menu .menu:first-child,
 	#content-header .block-menu .menu:first-child {display: none; width:100%; z-index:99999; background:#004da8; position:relative;}
-	.front #main-menu {top: 0px;}
+	.front #main-menu {top: 0px; display:none;}
 	.front .block-menu .menu{margin:0; padding:0; width: 100%;}
 	.block-menu .menu li ul {display:none; padding:0;}
 	#content-header .block-menu .menu li {width: 100%;}
@@ -960,7 +968,7 @@ fieldset { border: none; margin: 0; padding: 0; }
 	.searchform button{background:url(../img/bgi/sprites.png) no-repeat left -152px; width:29px; height:31px;}
 */
 	.front #logo{padding: 7.5% 0; width: 60%; margin: 0 auto; float: none;}
-	.front #content{width:100%;}
+	.front #content,  .sidebar-pull-left{width:100%; padding: 20px 0 0;}
 	.content-box{width:100%; padding:0;}
 	.figure-img{width:100%; padding:0;}
 	.figure-desc{padding:8px 0px 21px;}
@@ -1285,11 +1293,4 @@ fieldset { border: none; margin: 0; padding: 0; }
 }
 .sidebar .social-icon a.twitter:hover {
     background-position: -406px -29px;
-}
-
-
-/* Sidebar pull left */
-.sidebar-pull-left {
-	position:relative;
-	width:32%;
 }
