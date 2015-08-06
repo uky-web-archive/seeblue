@@ -4,7 +4,7 @@
 * Initialize theme settings
 */
 
-$theme_key = 'seeblue201409';
+$theme_key = 'seeblue201508';
 if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
 {
   //global $theme_key;
@@ -12,12 +12,12 @@ if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
   * The default values for the theme variables. Make sure $defaults exactly
   * matches the $defaults in the theme-settings.php file.
   */
-
+dd("initializing theme");
   $defaults = array(             // <-- change this array
     'background_logo_path'  => drupal_get_path('theme', $theme_key) . theme_get_setting('background_logo_path', $theme_key),
     'site_description' => " ",
-    'front_logo' => seeblue201409_save_file( drupal_get_path('theme', $theme_key) . theme_get_setting("front_logo", $theme_key)),
-    'interior_logo' => seeblue201409_save_file(drupal_get_path('theme', $theme_key) . theme_get_setting("interior_logo", $theme_key)),
+    'front_logo' => seeblue201508_save_file( drupal_get_path('theme', $theme_key) . theme_get_setting("front_logo", $theme_key)),
+    'interior_logo' => seeblue201508_save_file(drupal_get_path('theme', $theme_key) . theme_get_setting("interior_logo", $theme_key)),
     'theme_initialized' => true
   );
 
@@ -58,7 +58,7 @@ if ( is_null( theme_get_setting( 'theme_initialized', $theme_key ) ) )
  *	@author Miles Briggs
  *
  */
-function seeblue201409_preprocess_image(&$variables)
+function seeblue201508_preprocess_image(&$variables)
 {
   $directories = array('slideshow', 'teaser_thumb', 'page_header');
 
@@ -81,7 +81,7 @@ function seeblue201409_preprocess_image(&$variables)
  *
  *	@author Miles Briggs
  */
-function seeblue201409_preprocess_views_view(&$variables)
+function seeblue201508_preprocess_views_view(&$variables)
 {
   // if we have a slideshow view, add the appropriate scripts and stylesheets
   if ($variables['view']->human_name == "slideshow_output")
@@ -100,7 +100,7 @@ function seeblue201409_preprocess_views_view(&$variables)
  *	@author Miles Briggs
  *
  */
-function seeblue201409_preprocess_page(&$variables)
+function seeblue201508_preprocess_page(&$variables)
 {
   /**
    *	By default, drupal's main menu will only render as a single level, i.e., all child links are ignored.
@@ -120,7 +120,7 @@ function seeblue201409_preprocess_page(&$variables)
  *	@author Miles Briggs
  *
  */
-function seeblue201409_form_alter(&$form, &$form_state, $form_id)
+function seeblue201508_form_alter(&$form, &$form_state, $form_id)
 {
   if ($form_id == 'search_block_form')		//hook the search form to modify some attributes
   {
@@ -137,7 +137,7 @@ function seeblue201409_form_alter(&$form, &$form_state, $form_id)
 /**
 *Private theme function to create a file record
 */
-function seeblue201409_save_file($uri)
+function seeblue201508_save_file($uri)
 {
   global $user;
   $uri = drupal_get_path('theme',$GLOBALS['theme']) . $uri;

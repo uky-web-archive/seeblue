@@ -137,22 +137,22 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
         <div id="content-header">
 
         <?php if ($is_horizontal == 1): ?>
+          <nav id="main-menu" class="main-nav" role="navigation">
+                    <div class="region">
 
-          <div class="region">
+                      <div class="block-menu" id="block-system-main-menu">
 
-            <div class="block-menu" id="block-system-main-menu">
+                        <div class="content">
 
-              <div class="content">
+                          <?php $main_menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
+                          <?php print drupal_render($main_menu); ?>
 
-                <?php $main_menu =  menu_tree_output(menu_tree_page_data('main-menu')); ?>
-                <?php print drupal_render($main_menu); ?>
+                        </div>
 
-              </div>
+                      </div>
 
-            </div>
-
-          </div>
-
+                    </div>
+          </nav
         <?php endif; ?>
 
         <?php print render($page['content_header']); ?>
