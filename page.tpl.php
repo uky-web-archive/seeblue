@@ -152,12 +152,12 @@ $apath = base_path( ) . drupal_get_path('theme', variable_get('theme_default', N
                       </div>
 
                     </div>
-          </nav
+          </nav>
         <?php endif; ?>
 
-        <?php print render($page['content_header']); ?>
+        <?php //print render($page['content_header']); ?>
 
-        </div>
+      </div><!--end #content-header ? -->
 
       <?php endif; ?>
 

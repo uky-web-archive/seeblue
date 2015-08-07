@@ -20,7 +20,7 @@
             $(".flexslider .flex-control-nav").css("top", pager_top);
             $(".flexslider .flex-control-nav").css("display", "block");
         }
-        
+
     }
 
 // Utilizing the Modernizr object created to implement placeholder functionality
@@ -90,7 +90,7 @@ $(document).ready(function(){
 					  $(this).addClass('default_title_text');}
 				  });
 				}
-			}    
+			}
 		});
 	}
 
@@ -101,20 +101,19 @@ $(document).ready(function(){
 //		$('#block-system-main-menu .menu:first-child').slideToggle("fast");
 		$(".mobile-menu .menu:first-child").slideToggle('fast');
 		//$('#block-system-main-menu .secondary-menu').slideToggle("fast");
-		
+
 	});
 
 	//add class to menu list elements (li) based on whether they are parents or leaves
 //	$('.block-menu .menu li').each(function(index) {
 
 	$('.menu li').each(function(index) {
-		if ($(this).children().length < 2) { 						  
+		if ($(this).children().length < 2) {
 			$(this).addClass('plainlink');	//add 'plainlink' class to leaves
 		}
 		else {
-
 			$(this).addClass('parentlink');	//add 'parentlink' class to parents
-            $(this).children('a').attr('href', 'javascript:void(0);');
+            //$(this).children('a').attr('href', 'javascript:void(0);');
 		}
 	});
 
@@ -145,7 +144,7 @@ $(document).ready(function(){
 			$(this).siblings("ul").slideToggle('slow');
 		}
 	});
-	
+
 	$("#content-header .block-menu > .content > .menu > li").mouseover(function() {
 		if ($(window).width() > 640)
 		{
@@ -158,9 +157,9 @@ $(document).ready(function(){
 			$(this).removeClass("active");
 		}
 	});
-	
-	
-	//when a child link is hovered over, 
+
+
+	//when a child link is hovered over,
 	$("#content-header .block-menu > .content > .menu > li li").mouseover(function() {
 		$(this).parents("li.parentlink").children("a").addClass("highlight");
 	});
@@ -196,7 +195,7 @@ $(document).ready(function(){
 	});
 
 
- 
+
 
 
 	$("#tabs").tabs();
